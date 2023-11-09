@@ -835,6 +835,7 @@ th {
   .section-gap {
     padding: 70px 0;
   }
+  
 }
 
 .section-gap-top {
@@ -2476,6 +2477,30 @@ h6 {
   position: relative;
 }
 
+.spaceDiv{
+padding-top: 150px;
+  color: #FFF;
+
+font-family: Comfortaa;
+font-size: 25px;
+font-style: normal;
+font-weight: 700;
+line-height: 38.4px;
+}
+
+.background-images{
+  background-image: url('../img/IMAGE.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 400px !important;
+  background-size: cover;
+  width: 100%;
+
+}
+.mask-images img
+{
+  height: 150px !important;
+}
 #mobile-nav ul li a {
   color: #fff;
   font-size: 13px;
