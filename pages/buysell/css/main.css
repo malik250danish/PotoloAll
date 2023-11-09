@@ -2885,7 +2885,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: none;
 }
 
-.testimonials-area .container:before {
+/* .testimonials-area .container:before {
   content: "";
   position: absolute;
   left: 17%;
@@ -2898,7 +2898,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: -moz-linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
   background: -ms-linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
   background: -o-linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
-}
+} */
 
 @media (max-width: 991px) {
   .testimonials-area .container:before {
@@ -4839,4 +4839,31 @@ body.mobile-nav-active #mobile-nav-toggle {
     height: 120% !important;
     min-width: 120% !important;
   }
+}
+
+/* New Code  */
+.heroImg img{
+  width: 75%;
+}
+.title img{
+  height: 70px;
+  margin: 30px 0;
+}
+.downloadApp{
+  height: 30%;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.671)), url(../img/LastSecPic.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.fa-google-play{
+  color: #1AB33E !important;
+}
+.buttons:hover .fa-google-play {
+  color: #ffffff !important;
+}
+.downloadAppBtns div .buttons {
+  height: 70px;
+  border-radius: 5px !important;
 }
