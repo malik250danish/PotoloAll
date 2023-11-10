@@ -2378,9 +2378,19 @@ h6 {
   color: #fff;
   font-weight: 500;
   font-size: 15px;
-  font-family: "Poppins", sans-serif;
+  font-family:  comfortaa !important;
   text-transform: capitalize;
   outline: none;
+}
+@media screen and (max-width: 992px) {
+  .headerFont{
+    font-size: 18px !important;
+   }
+}
+@media screen and (max-width: 452px) {
+  .headerFont{
+    font-size: 15px !important;
+   }
 }
 
 .nav-menu a:last-child a {
@@ -4850,7 +4860,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 30px 0;
 }
 .downloadApp{
-  height: 30%;
+  height: 400px !important;
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.671)), url(../img/LastSecPic.jpeg);

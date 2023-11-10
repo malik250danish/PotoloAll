@@ -154,6 +154,16 @@ line-height: 38.4px; /* 128% */
 .spaceDiv{
   padding-top: 120px !important;
 }
+@media screen and (max-width: 600px) {
+  .spaceDiv{
+    padding-top: 50px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gymPic{
+   margin-top: 75px !important;
+  }
+}
 
 /**
  *  Typography
@@ -2400,7 +2410,7 @@ h6 {
   color: #fff;
   font-weight: 500;
   font-size: 15px;
-  font-family: "Poppins", sans-serif;
+  font-family:  comfortaa !important;
   text-transform: capitalize;
   outline: none;
 }
@@ -2409,7 +2419,11 @@ h6 {
   margin-right: 0;
   padding-right: 0;
 }
-
+@media screen and (max-width: 992px) {
+  .headerFont{
+    font-size: 18px !important;
+   }
+}
 .nav-menu ul {
   margin: 24px 0 0 26px;
   padding: 10px;
@@ -2915,7 +2929,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   z-index: -1;
   width: 340px;
   height: 340px;
-  background: linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
+  /* background: linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%); */
   background: -webkit-linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
   background: -moz-linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
   background: -ms-linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
