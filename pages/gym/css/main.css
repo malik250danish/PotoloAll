@@ -99,6 +99,7 @@ select {
 figure {
   margin: 0;
 }
+ 
 
 a {
   -webkit-transition: all 0.3s ease 0s;
@@ -131,6 +132,27 @@ a:hover {
 .card-panel {
   margin: 0;
   padding: 60px;
+}
+.downloadBg{
+  background-image: url('../img/downimage.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 400px !important;
+  background-size: cover;
+  width: 100%;
+  margin-top: 110px !important;
+
+}
+.donwloadTxt{
+  color: #FFF !important;
+font-family: Comfortaa !important;
+font-size: 30px !important;
+font-style: normal;
+font-weight: 700;
+line-height: 38.4px; /* 128% */
+}
+.spaceDiv{
+  padding-top: 120px !important;
 }
 
 /**
