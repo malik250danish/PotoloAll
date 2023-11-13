@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+  <head>
+    <!-- Mobile Specific Meta -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png" />
+    <!-- Author Meta -->
+    <meta name="author" content="codepixer" />
+    <!-- Meta Description -->
+    <meta name="description" content />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="./animatedheadline//animated-headline-master/css/reset.css"
+    />
+    <!-- CSS reset -->
+    <link
+      rel="stylesheet"
+      href="./animatedheadline//animated-headline-master/css/style.css"
+    />
+    <!-- Resource style -->
+    <title>Potlo Lite</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600|Roboto:400,400i,500"
+      rel="stylesheet"
+    />
+
+    <!-- swiper js  -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!--
+			CSS
+			============================================= -->
+    <link rel="stylesheet" href="css/linearicons.css" />
+    <!--  <link rel="stylesheet" href="css/font-awesome.min.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="css/hexagons.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!--############> AOS Animation Start <#############  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- font aesome -->
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <style>
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        background: url("./img/FirstBanner2.png");
+        /* background-color: #15B039; */
+        overflow: hidden;
+        z-index: 10000000;
+      }
+
+      .preloader .text-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        overflow: hidden;
+        color: white;
+        opacity: 0;
+      }
+      .text-container h1 {
+        color: White !important;
+      }
+    </style>
+
+    <!-- Line Start  -->
+
+    <style>
+      #mvArea {
+        position: absolute;
+        width: 100px;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      #mvArea .scrollNavWrap {
+        position: absolute;
+        width: 30px;
+        height: 130px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        animation: startTxtArea 2.1s;
+      }
+
+      #mvArea .scrollNavWrap .scrollNav {
+        position: absolute;
+        top: 0;
+        color: #1ab33e;
+        font-size: 15px;
+        font-weight: 800 !important;
+        animation: equallyBound 1.4s ease infinite;
+      }
+
+      #mvArea .scrollNavWrap .scrollNav:after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 1px;
+        height: 80px;
+        background-color: #1ab33e;
+        left: 14px;
+        bottom: -130px;
+        animation: lineMove 0.9s ease-in-out infinite;
+      }
+      #mvArea.resize .scrollNavWrap {
+        opacity: 0;
+      }
+
+      @media only screen and (min-width: 879px) {
+        .scrollNavWrap {
+          animation: none;
+        }
+      }
+
+      .onlyPc {
+        display: none !important;
+      }
+
+      @media only screen and (min-width: 879px) {
+        .onlyPc {
+          display: block !important;
+        }
+      }
+
+      @keyframes equallyBound {
+        0% {
+          top: 0;
+        }
+
+        50% {
+          top: 5px;
+        }
+
+        to {
+          top: 0;
+        }
+      }
+
+      @keyframes lineMove {
+        0% {
+          height: 0;
+          bottom: -12px;
+        }
+
+        15% {
+          height: 12px;
+          bottom: -24px;
+        }
+
+        50% {
+          height: 80px;
+          bottom: -92px;
+        }
+
+        85% {
+          height: 12px;
+          bottom: -118px;
+        }
+
+        to {
+          height: 0;
+          bottom: -130px;
+        }
+      }
+
+      .cd-headline {
+        position: absolute;
+        left: 0px !important;
+        top: 0px;
+      }
+
+      .sectionC {
+        position: static !important;
+      }
+
+      .likedownload {
+        position: absolute;
+        top: 90px;
+        left: 0px;
+      }
+      .likedownload img {
+        width: 35px;
+      }
+      .mainlikedownload {
+        display: flex;
+      }
+
+      .setheaderlinks a {
+        font-weight: 900;
+      }
+    </style>
+
+    <!-- Slider image start  -->
+    <style>
+      /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap"); */
+
+      :root {
+        --cardslide-width: 190px !important;
+        --cardslide-height: 300px;
+        --cardslide-transition-duration: 800ms;
+        --cardslide-transition-easing: ease;
+      }
+
+      .maincardslidercirle {
+        width: 100%;
+        height: 110vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+
+      .appslide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* overflow: hidden; */
+      }
+
+      .cardslideList {
+        position: absolute;
+        width: calc(3 * var(--cardslide-width));
+        height: auto;
+      }
+
+      .cardslideList__btn {
+        --btn-size: 35px;
+        width: var(--btn-size);
+        height: var(--btn-size);
+        position: absolute;
+        top: 50%;
+        z-index: 100;
+      }
+
+      .cardslideList .cardslides__wrappslideer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        perspective: 1000px;
+      }
+
+      .cardslide {
+        --cardslide-translateY-offset: 100vh;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%)
+          translateX(var(--cardslide-translateX-offset))
+          translateY(var(--cardslide-translateY-offset))
+          rotateY(var(--cardslide-rotation-offset))
+          scale(var(--cardslide-scale-offset));
+        display: inline-block;
+        width: var(--cardslide-width);
+        height: var(--cardslide-height);
+        transition: transform var(--cardslide-transition-duration)
+          var(--cardslide-transition-easing);
+        user-select: none;
+      }
+
+      .cardslide::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        mix-blend-mode: darken;
+        /* background: #000;
+  z-index: 1;
+  transition: opacity var(--cardslide-transition-duration) var(--cardslide-transition-easing);
+  opacity: calc(1 - var(--opacity)); */
+      }
+
+      .cardslide__image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .cardslide__image img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 90%;
+        mix-blend-mode: darken !important;
+      }
+
+      .cardslide.current--cardslide {
+        --current-cardslide-rotation-offset: 0;
+        --cardslide-translateX-offset: 0;
+        --cardslide-rotation-offset: var(--current-cardslide-rotation-offset);
+        --cardslide-scale-offset: 1.2;
+        --opacity: 0.8;
+      }
+
+      .cardslide.previous--cardslide {
+        --cardslide-translateX-offset: calc(-1 * var(--cardslide-width) * 1.1);
+        --cardslide-rotation-offset: 25deg;
+      }
+
+      .cardslide.next--cardslide {
+        --cardslide-translateX-offset: calc(var(--cardslide-width) * 1.1);
+        --cardslide-rotation-offset: -25deg;
+      }
+
+      .cardslide.previous--cardslide,
+      .cardslide.next--cardslide {
+        --cardslide-scale-offset: 0.9;
+        --opacity: 0.4;
+      }
+
+      .infoslideListslide {
+        position: absolute;
+        width: calc(3 * var(--cardslide-width));
+        height: var(--cardslide-height);
+        pointer-events: none;
+      }
+
+      .infoslideListslide .infoslide__wrappslideer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+      }
+
+      .infoslide {
+        margin-bottom: calc(var(--cardslide-height) / 8);
+        margin-left: calc(var(--cardslide-width) / 1.5);
+        transform: translateZ(2rem);
+        transition: transform var(--cardslide-transition-duration)
+          var(--cardslide-transition-easing);
+      }
+
+      .infoslide .text {
+        position: relative;
+        font-family: "Montserrat";
+        font-size: calc(var(--cardslide-width) * var(--text-size-offset, 0.2));
+        white-space: nowrap;
+        color: #fff;
+        width: fit-content;
+      }
+
+      .infoslide .name,
+      .infoslide .location {
+        text-transform: uppercase;
+      }
+
+      .infoslide .location {
+        font-weight: 800;
+        --mg-left: 40px;
+        --text-size-offset: 0.12;
+        margin-left: var(--mg-left);
+        margin-bottom: calc(var(--mg-left) / 2);
+        padding-bottom: 0.8rem;
+      }
+
+      .infoslide .location::before,
+      .infoslide .location::after {
+        content: "";
+        position: absolute;
+        background: #fff;
+        left: 0%;
+        transform: translate(calc(-1 * var(--mg-left)), -50%);
+      }
+
+      .infoslide .location::before {
+        top: 50%;
+        width: 20px;
+        height: 5px;
+      }
+
+      .infoslide .location::after {
+        bottom: 0;
+        width: 60px;
+        height: 2px;
+      }
+
+      .infoslide .description {
+        --text-size-offset: 0.065;
+        font-weight: 500;
+      }
+
+      .infoslide.current--infoslide {
+        opacity: 1;
+        display: block;
+      }
+
+      .infoslide.previous--infoslide,
+      .infoslide.next--infoslide {
+        opacity: 0;
+        display: none;
+      }
+
+      .loading__wrappslideer {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        z-index: 200;
+      }
+
+      .loading__wrappslideer .loader--text {
+        color: #fff;
+        font-family: "Montserrat";
+        font-weight: 500;
+        margin-bottom: 1.4rem;
+      }
+
+      .loading__wrappslideer .loader {
+        position: relative;
+        width: 200px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.25);
+      }
+
+      .loading__wrappslideer .loader span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(255, 0, 0);
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+
+      @media only screen and (min-width: 800px) {
+        :root {
+          --cardslide-width: 250px;
+          --cardslide-height: 400px;
+        }
+      }
+      @media only screen and (min-width: 800px) {
+        :root {
+          --cardslide-width: 250px;
+          --cardslide-height: 400px;
+        }
+      }
+
+      .support {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        padding: 10px;
+        display: flex;
+      }
+
+      .support a {
+        margin: 0 10px;
+        color: #fff;
+        font-size: 1.8rem;
+        backface-visibility: hidden;
+        transition: all 150ms ease;
+      }
+
+      .support a:hover {
+        transform: scale(1.1);
+      }
+      .is-full-width{
+        font-size:15px !important;
+      }
+      .headFont{
+        font-size: 25px !important;
+      }
+      
+    </style>
+    <!-- Slider image End  -->
+  </head>
+
+  <body>
+    
+
+    <!-- start header Area -->
+    <header id="header" class="pt-3 bg-transparent">
+      <div class="px-sm-3 mx-sm-3 px-md-5 mx-md-5 main-menu">
+        <div class="row align-items-center justify-content-between d-flex">
+          <div id="logo">
+            <a href="index.html"
+              ><img src="./img/plogo.png" style="width: 115px" alt title
+            /></a>
+          </div>
+          <nav id="nav-menu-container">
+            <ul class="nav-menu">
+              <li class="menu-active setheaderlinks">
+                <a href="#service">Services</a>
+              </li>
+              <li class="menu-active setheaderlinks"><a href="#">Login</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header Area -->
+
+    <!-- start banner Area -->
+    <section class="position-relative">
+      <div class="container-fluid home-banner-area">
+        <div class="px-sm-3 mx-sm-3 px-md-5 mx-md-5">
+          <div
+            class="row fullscreen d-flex align-items-center justify-content-between"
+          >
+            <div
+              class="home-banner-content col-lg-6 col-md-6"
+              os="fade-down"
+              os-duration="3000"
+              os-delay="3000"
+            >
+              <section class="cd-intro sectionC">
+                <h1 class="cd-headline clip is-full-width ">
+                  <span class="headerFont">Be POTOLO & </span>
+                  <span class="cd-words-wrapper headerFont">
+                    <b class="is-visible">Arrive in Style  </b>
+                    <b>Seamless Travel</b>
+                    <b>Your Ride, Your Way </b>
+                    <b>Send your Parcel </b>
+                    <b>Safe and Secure</b>
+                    <b>On-Demand Comfort </b>
+                    <b>Effortless Commutes </b>
+                    <b>Fare Transparency</b>
+                    <b>Track Your Journey</b>
+                    <b>Go Green</b>
+                   
+                  </span>
+                </h1>
+
+                <div class="mb-5 logos d-flex">
+                  <a href="#">
+                    <div class="brandIcon ms-2 gIcon">
+                      <i
+                        class="fa-brands fa-google-play"
+                        style="font-size: 40px"
+                      ></i>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="brandIcon mx-2">
+                      <i class="fa-brands fa-apple" style="font-size: 40px"></i>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="brandIcon mx-2">
+                      <i
+                        class="fa-brands fa-google-drive"
+                        style="font-size: 40px"
+                      ></i>
+                    </div>
+                  </a>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6 col-md-6 pt-5 ps-5 bro-image">
+
+              
+           
+
+                <img src="./img/bro.png" class="img-fluid w-75" > 
+
+             
+               </div> 
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <div id="mvArea">
+          <div class="scrollNavWrap onlyPc">
+            <span class="scrollNav">Scroll</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Start fact Area -->
+    <section class="fact-area" os="fade-up" os-duration="1500">
+      <div class="container">
+        <div class="fact-box">
+          <div class="row align-items-center">
+            <div class="col single-fact">
+              <h2>100K+</h2>
+              <p>Total Downloads</p>
+            </div>
+            <div class="col single-fact">
+              <h2>10K+</h2>
+              <p>Positive Reviews</p>
+            </div>
+            <div class="col single-fact">
+              <h2>50K+</h2>
+              <p>Daily Visitors</p>
+            </div>
+            <div class="col single-fact">
+              <h2>0.02%</h2>
+              <p>Uninstallation Rate</p>
+            </div>
+            <div class="col single-fact">
+              <h2>15K+</h2>
+              <p>Pro User</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End fact Area -->
+
+    <!-- Start feature Area -->
+    <section
+      class="feature-area section-gap-top"
+      os="fade-up"
+      os-duration="1000"
+    >
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6">
+            <div class="section-title text-center">
+              <h2>Unique Features</h2>
+              <p>
+                Our website boasts unique features that set us apart, ensuring a distinct and exceptional user experience.
+
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
+            <div class="single-feature">
+              <a href="#" class="title mask-images">
+                 <img src="./img/Mask group11.png" class="img-fluid w-50 pb-4">
+                  
+                <!-- <span class="lnr lnr-book"></span> -->
+                <h3>Expert Technicians</h3>
+              </a>
+              <p>
+                Our skilled and experienced team of technicians is dedicated to providing top-notch solutions and services for all your needs. Trust us for expertise you can rely on.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
+            <div class="single-feature">
+              <a href="#" class="title mask-images">
+                <img src="./img/Mask group.png" class="img-fluid w-50 pb-4">
+
+                <!-- <span class="lnr lnr-book"></span> -->
+                <h3>Professional Service</h3>
+              </a>
+              <p>
+                Elevate your experience with our dedicated team, delivering a seamless and reliable service that exceeds industry standards.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
+            <div class="single-feature">
+              <a href="#" class="title mask-images">
+                <img src="./img/Mask group (1).png" class="img-fluid w-50 pb-4">
+
+                <!-- <span class="lnr lnr-book"></span> -->
+                <h3>Great Support</h3>
+              </a>
+              <p>
+                Our commitment to exceptional support ensures that you have a reliable partner by your side, ready to assist and exceed your expectations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End feature Area -->
+
+    <!-- Start about Area -->
+    <section class="about-area" id="service">
+      <div class="container">
+        <div class="row mt-3 align-items-center">
+          <div
+            class="col-lg-5 home-about-left order-1 order-lg-0 abputimgsetting"
+            os="fade-right"
+            os-duration="1000"
+          >
+            <!-- <video src="./img/resteezmockup/Blue Ethereal Skincare Beauty Mobile Mock Up Video Facebook Post.mp4" autoplay></video> -->
+            <!-- <img class="img-fluid"
+							src="img/resteezmockup/Elegant Geometric Gold Foil Mobile Mockup Pinterest Pin .png"
+							alt> -->
+
+            <img class="img-fluid" src="img/hmain.png" alt />
+          </div>
+          <div
+            class="offset-lg-1 col-lg-6 order-0 home-about-right"
+            os="fade-up"
+            os-duration="1500"
+          >
+            <h1>
+              Revolutionize Your Ride <br>
+              with RideshareX: Your  <br>
+              Ultimate Transportation App
+              
+            </h1>
+            <p>
+              Revolutionize your ride with RideshareX, the ultimate transportation app designed for the modern commuter. Experience a seamless journey like never before, where safety, reliability, and convenience converge. Say goodbye to transportation hassles and welcome a new standard of efficiency with RideshareX. Your ride, redefined.
+            </p>
+            <!-- <a class="primary-btn text-uppercase" href="#">Get Details</a> -->
+          </div>
+        </div>
+
+        <div class="row mt-2 pt-2 mt-lg-5 pt-lg-5 align-items-center">
+          <div
+            class="col-lg-6 home-about-right home-about-right2"
+            os="fade-up"
+            os-duration="1500"
+          >
+          <h1>
+            Revolutionize Your Ride <br>
+            with RideshareX: Your  <br>
+            Ultimate Transportation App
+            
+          </h1>
+            <p>
+              Experience the next level of convenience and efficiency with RideshareX, a cutting-edge rider app meticulously designed for seamless transportation. Whether you're commuting to work, exploring the city, or heading out for an evening, our app guarantees a reliable and comfortable journey. Say goodbye to traditional hassles and embrace a new era of effortless transportation.
+            </p>
+            <div class="download-button d-flex flex-row justify-content-start">
+              <div class="buttons flex-row d-flex">
+                
+                <i class="fa-brands fa-apple"></i>
+                <div class="desc">
+                  <a href="#">
+                    <p>
+                      <span>Available</span> <br />
+                      on App Store
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class="buttons dark flex-row d-flex">
+                <i class="fa-brands fa-google-play"></i>
+                <div class="desc">
+                  <a href="#">
+                    <p>
+                      <span>Available</span> <br />
+                      on Play Store
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 offset-lg-1 home-about-left abputimgsetting"
+            os="fade-left"
+            os-duration="1000"
+          >
+           
+              <img src="./img/doc.png" class="img-fluid w-100">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-2 pt-lg-5 pb-md-5">
+      <div class="container">
+        <div class="row mt-2 pt-2 mt-lg-5 pt-lg-5 align-items-center ">
+          <div
+            class="col-lg-5  home-about-left abputimgsetting"
+            os="flip-left"
+            os-duration="1000"
+          >
+          <img src="./img/pharm.png" class="img-fluid" alt="">
+            <!-- <img
+              class="img-fluid"
+              src="./img/FileShareAPpp/filesharemain.png"
+              alt
+            /> -->
+          </div>
+          <div
+            class="col-lg-6 offset-lg-1 home-about-right home-about-right2"
+            os="zoom-in"
+            os-duration="1500"
+          >
+           <h1>Cruise with Confidence on SimplyRide: <br>
+            Your Ultimate Transportation App
+            
+            </h1>
+            <p>
+              Empower your sharing experience with SharePro, a user-friendly app designed for seamless sharing of documents, images, and more. Bid farewell to the inconvenience of email attachments and step into the future of hassle-free, secure file sharing.
+            </p>
+            <div class="download-button d-flex flex-row justify-content-start">
+              <div class="buttons flex-row d-flex">
+                
+                <i class="fa-brands fa-apple"></i>
+                <div class="desc">
+                  <a href="#">
+                    <p>
+                      <span>Available</span> <br />
+                      on App Store
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class="buttons dark flex-row d-flex">
+                <i class="fa-brands fa-google-play"></i>
+                <div class="desc">
+                  <a href="#">
+                    <p>
+                      <span>Available</span> <br />
+                      on Play Store
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="background-images">
+      <div class="container textDiv">
+        <div class="spaceDiv">
+          <p class="donwloadTxt text-center ">Get Your free Download of Potolo Lite App Today!</p>
+          <div class="download-button d-flex flex-row justify-content-center  mt-5">
+            <div class="buttons flex-row d-flex">
+              
+              <i class="fa-brands fa-apple"></i>
+              <div class="desc">
+                <a href="#">
+                  <p>
+                    <span>Available</span> <br />
+                    on App Store
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="buttons dark flex-row d-flex">
+              <i class="fa-brands fa-google-play"></i>
+              <div class="desc">
+                <a href="#">
+                  <p>
+                    <span>Available</span> <br />
+                    on Play Store
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
+
+      </div>
+
+    </section>
+
+
+    <!-- Start Testimonials Area -->
+    <section class="testimonials-area section-gap-top">
+      <div class="container">
+        <div class="testi-slider owl-carousel" data-slider-id="1">
+          <div class="item">
+            <div class="testi-item">
+              <img src="img/quote.png" alt />
+              <h4>Fanny Spencer</h4>
+              <ul class="list">
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+              </ul>
+              <div class="wow fadeIn" data-wow-duration="1s">
+                <p>
+                  EasyShare has transformed the way we exchange files. It's so user-friendly; we no longer struggle with complex sharing methods. A fantastic solution!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testi-item">
+              <img src="img/quote.png" alt />
+              <h4>Fanny Spencer</h4>
+              <ul class="list">
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+              </ul>
+              <div class="wow fadeIn" data-wow-duration="1s">
+                <p>
+                  EasyShare has added a layer of security and simplicity to our file-sharing processes. It's become an integral part of our daily operations, making collaboration smoother than ever.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testi-item">
+              <img src="img/quote.png" alt />
+              <h4>Fanny Spencer</h4>
+              <ul class="list">
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+              </ul>
+              <div class="wow fadeIn" data-wow-duration="1s">
+                <p>
+                  No exaggeration, EasyShare is a lifesaver. Our team efficiency has skyrocketed with its seamless file-sharing capabilities. A must-have for anyone looking to streamline their workflow.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testi-item">
+              <img src="img/quote.png" alt />
+              <h4>Fanny Spencer</h4>
+              <ul class="list">
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+              </ul>
+              <div class="wow fadeIn" data-wow-duration="1s">
+                <p>
+                  In a sea of file-sharing apps, EasyShare stands tall. It's reliable, intuitive, and has genuinely improved our team collaboration. It's the kind of tool you didn't know you needed until you try it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="owl-thumbs d-flex justify-content-center"
+          data-slider-id="1"
+        >
+          <div class="owl-thumb-item">
+            <div>
+              <img class="img-fluid" src="img/testimonial/t1.jpg" alt />
+            </div>
+            <div class="overlay overlay-grad"></div>
+          </div>
+          <div class="owl-thumb-item">
+            <div>
+              <img class="img-fluid" src="img/testimonial/t2.jpg" alt />
+            </div>
+            <div class="overlay overlay-grad"></div>
+          </div>
+          <div class="owl-thumb-item">
+            <div>
+              <img class="img-fluid" src="img/testimonial/t3.jpg" alt />
+            </div>
+            <div class="overlay overlay-grad"></div>
+          </div>
+          <div class="owl-thumb-item">
+            <div>
+              <img class="img-fluid" src="img/testimonial/t4.jpg" alt />
+            </div>
+            <div class="overlay overlay-grad"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Testimonials Area -->
+
+    <!-- Start Screenshot Area -->
+    <!-- <section class="screenshot-area section-gap-top">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6">
+            <div class="section-title text-center">
+              <h2>Featured Screens</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3 mb-md-5 pb-md-5">
+          <div class="owl-carousel owl-screenshot">
+            <div class="single-screenshot">
+               <img class="img-fluid" src="img/screenshots/s1.jpg" alt> 
+              <img
+                class="img-fluid"
+                src="./img/resteezmockup/restmobile.png"
+                alt
+              />
+            </div>
+            <div class="single-screenshot">
+               <img class="img-fluid" src="img/screenshots/s2.jpg" alt> -->
+              <!-- <img
+                class="img-fluid"
+                src="./img/RidelMockup/ridemobile.png"
+                alt
+              />
+            </div>
+            <div class="single-screenshot"> -->
+              <!-- <img class="img-fluid" src="img/screenshots/s3.jpg" alt>
+              <img
+                class="img-fluid"
+                src="./img/Wokermockup/workmobile (1).png"
+                alt
+              />
+            </div>
+            <div class="single-screenshot">
+              <img class="img-fluid" src="img/screenshots/s4.jpg" alt>
+              <img
+                class="img-fluid"
+                src="./img/FileShareAPpp/filemobile.png"
+                alt
+              />
+            </div>
+            <div class="single-screenshot">
+              <img class="img-fluid" src="img/screenshots/s4.jpg" alt> 
+              <img
+                class="img-fluid"
+                src="./img/BussTrackingApp/trackingmobile.png"
+                alt
+              />
+            </div>
+          </div>
+        </div>-->
+      </div>
+    </section>
+
+    <!-- End Screenshot Area -->
+
+    <!-- Start Footer Area -->
+
+    <footer class="mt-5 text-center text-lg-start" style="background-color: #1b1b1b">
+      <!-- Copyright -->
+      <div
+        class="text-center p-3 text-white"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        © 2023 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">Potolo Lite</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- End Footer Area -->
+
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"
+    ></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/hoverIntent.js"></script>
+    <script src="js/superfish.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/owl-carousel-thumb.min.js"></script>
+    <script src="js/hexagons.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="./animatedheadline/animated-headline-master/js/main.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script>
+      var mySwiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        autoplay: {
+          delay: 3000,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 1,
+        loop: true,
+        coverflowEffect: {
+          rotate: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        },
+      });
+    </script> -->
+
+    <script>
+      var swiper = new Swiper(".swiper-container.two", {
+        pagination: ".swiper-pagination",
+        paginationClickable: true,
+        effect: "coverflow",
+        loop: true,
+        autoplay: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflow: {
+          rotate: 0,
+          stretch: 100,
+          depth: 150,
+          modifier: 1.5,
+          slideShadows: false,
+        },
+      });
+    </script>
+
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script>
+      const tl = gsap.timeline();
+
+      tl.to("body", {
+        overflow: "hidden",
+      })
+        .to(".preloader .text-container", {
+          duration: 0.2,
+          opacity: 1,
+          ease: "Power3.easeOut",
+        })
+        .from(".preloader .text-container h1", {
+          duration: 0.8,
+          delay: 0.2,
+          y: 70,
+          skewY: 10,
+          stagger: 0.2,
+          ease: "Power3.easeOut",
+        })
+        .to(".preloader .text-container h1", {
+          duration: 0.5,
+          y: 70,
+          skewY: -20,
+          stagger: 0.1,
+          ease: "Power3.easeOut",
+        })
+        .to(".preloader", {
+          duration: 0.8,
+          height: "0vh",
+          ease: "Power3.easeOut",
+        })
+        .to(
+          "body",
+          {
+            overflow: "auto",
+          },
+          "-=2"
+        )
+        .to(".preloader", {
+          display: "none",
+        });
+    </script>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        var content = document.getElementById("mvArea");
+        var scrollPosition = window.scrollY;
+
+        // Adjust this value to determine when to remove the section
+        if (scrollPosition > 30) {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    </script>
+
+    <!-- Slider Start  -->
+
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <!-- <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script> -->
+
+    <script>
+      console.clear();
+
+      const { gsap, imagesLoaded } = window;
+
+      const buttons = {
+        prev: document.querySelector(".btn--left"),
+        next: document.querySelector(".btn--right"),
+      };
+      const cardslidesContainerEl = document.querySelector(
+        ".cardslides__wrappslideer"
+      );
+      const appslideBgContainerEl = document.querySelector(".appslide__bg");
+
+      const cardslideinfoslidesContainerEl = document.querySelector(
+        ".infoslide__wrappslideer"
+      );
+
+      // Add an interval to simulate automatic scrolling
+      const scrollInterval = 4000; // Set the interval time in milliseconds
+      let autoScrollTimer;
+
+      function startAutoScroll() {
+        autoScrollTimer = setInterval(() => {
+          buttons.next.click();
+        }, scrollInterval);
+      }
+
+      function stopAutoScroll() {
+        clearInterval(autoScrollTimer);
+      }
+
+      // Start auto-scrolling when the page loads
+      startAutoScroll();
+
+      // Stop auto-scrolling when the user interacts with the cardslides
+      cardslidesContainerEl.addEventListener("pointermove", stopAutoScroll);
+
+      // Resume auto-scrolling when the user stops interacting with the cardslides
+      cardslidesContainerEl.addEventListener("pointerout", startAutoScroll);
+
+      //     console.clear();
+
+      // const { gsap, imagesLoaded } = window;
+
+      // const buttons = {
+      //   prev: document.querySelector(".btn--left"),
+      //   next: document.querySelector(".btn--right"),
+      // };
+      // const cardslidesContainerEl = document.querySelector(".cardslides__wrappslideer");
+      // const appslideBgContainerEl = document.querySelector(".appslide__bg");
+
+      // const cardslideinfoslidesContainerEl = document.querySelector(".infoslide__wrappslideer");
+
+      buttons.next.addEventListener("click", () => swapcardslides("right"));
+      buttons.prev.addEventListener("click", () => swapcardslides("left"));
+
+      function swapcardslides(direction) {
+        const currentcardslideEl = cardslidesContainerEl.querySelector(
+          ".current--cardslide"
+        );
+        const previouscardslideEl = cardslidesContainerEl.querySelector(
+          ".previous--cardslide"
+        );
+        const nextcardslideEl =
+          cardslidesContainerEl.querySelector(".next--cardslide");
+        const currentBgImageEl =
+          appslideBgContainerEl.querySelector(".current--image");
+        const previousBgImageEl =
+          appslideBgContainerEl.querySelector(".previous--image");
+        const nextBgImageEl =
+          appslideBgContainerEl.querySelector(".next--image");
+        changeinfoslide(direction);
+        swapcardslidesClass();
+        removecardslideEvents(currentcardslideEl);
+        function swapcardslidesClass() {
+          currentcardslideEl.classList.remove("current--cardslide");
+          previouscardslideEl.classList.remove("previous--cardslide");
+          nextcardslideEl.classList.remove("next--cardslide");
+          currentBgImageEl.classList.remove("current--image");
+          previousBgImageEl.classList.remove("previous--image");
+          // nextBgImageEl.classList.remove("next--image");
+          currentcardslideEl.style.zIndex = "50";
+          currentBgImageEl.style.zIndex = "-2";
+          if (direction === "right") {
+            previouscardslideEl.style.zIndex = "20";
+            nextcardslideEl.style.zIndex = "30";
+
+            nextBgImageEl.style.zIndex = "-1";
+
+            currentcardslideEl.classList.add("previous--cardslide");
+            previouscardslideEl.classList.add("next--cardslide");
+            nextcardslideEl.classList.add("current--cardslide");
+
+            currentBgImageEl.classList.add("previous--image");
+            previousBgImageEl.classList.add("next--image");
+            nextBgImageEl.classList.add("current--image");
+          } else if (direction === "left") {
+            previouscardslideEl.style.zIndex = "30";
+            nextcardslideEl.style.zIndex = "20";
+
+            previousBgImageEl.style.zIndex = "-1";
+
+            currentcardslideEl.classList.add("next--cardslide");
+            previouscardslideEl.classList.add("current--cardslide");
+            nextcardslideEl.classList.add("previous--cardslide");
+
+            currentBgImageEl.classList.add("next--image");
+            previousBgImageEl.classList.add("current--image");
+            nextBgImageEl.classList.add("previous--image");
+          }
+        }
+      }
+
+      function changeinfoslide(direction) {
+        let currentinfoslideEl = cardslideinfoslidesContainerEl.querySelector(
+          ".current--infoslide"
+        );
+        let previousinfoslideEl = cardslideinfoslidesContainerEl.querySelector(
+          ".previous--infoslide"
+        );
+        let nextinfoslideEl =
+          cardslideinfoslidesContainerEl.querySelector(".next--infoslide");
+
+        gsap
+          .timeline()
+          .to([buttons.prev, buttons.next], {
+            duration: 0.2,
+            opacity: 0.5,
+            pointerEvents: "none",
+          })
+          .to(
+            currentinfoslideEl.querySelectorAll(".text"),
+            {
+              duration: 0.4,
+              stagger: 0.1,
+              translateY: "-120px",
+              opacity: 0,
+            },
+            "-="
+          )
+          .call(() => {
+            swapinfoslidesClass(direction);
+          })
+          .call(() => initcardslideEvents())
+          .fromTo(
+            direction === "right"
+              ? nextinfoslideEl.querySelectorAll(".text")
+              : previousinfoslideEl.querySelectorAll(".text"),
+            {
+              opacity: 0,
+              translateY: "40px",
+            },
+            {
+              duration: 0.4,
+              stagger: 0.1,
+              translateY: "0px",
+              opacity: 1,
+            }
+          )
+          .to([buttons.prev, buttons.next], {
+            duration: 0.2,
+            opacity: 1,
+            pointerEvents: "all",
+          });
+      }
+
+      function updatecardslide(e) {
+        const cardslide = e.currentTarget;
+        const box = cardslide.getBoundingClientRect();
+        const centerPosition = {
+          x: box.left + box.width / 2,
+          y: box.top + box.height / 2,
+        };
+        let angle = Math.atan2(e.pageX - centerPosition.x, 0) * (35 / Math.PI);
+        gsap.set(cardslide, {
+          "--current-cardslide-rotation-offset": `${angle}deg`,
+        });
+        const currentinfoslideEl = cardslideinfoslidesContainerEl.querySelector(
+          ".current--infoslide"
+        );
+        gsap.set(currentinfoslideEl, {
+          rotateY: `${angle}deg`,
+        });
+      }
+
+      function resetcardslideTransforms(e) {
+        const cardslide = e.currentTarget;
+        const currentinfoslideEl = cardslideinfoslidesContainerEl.querySelector(
+          ".current--infoslide"
+        );
+        gsap.set(cardslide, {
+          "--current-cardslide-rotation-offset": 0,
+        });
+        gsap.set(currentinfoslideEl, {
+          rotateY: 0,
+        });
+      }
+
+      function initcardslideEvents() {
+        const currentcardslideEl = cardslidesContainerEl.querySelector(
+          ".current--cardslide"
+        );
+        currentcardslideEl.addEventListener("pointermove", updatecardslide);
+        currentcardslideEl.addEventListener("pointerout", (e) => {
+          resetcardslideTransforms(e);
+        });
+      }
+
+      initcardslideEvents();
+
+      function removecardslideEvents(cardslide) {
+        cardslide.removeEventListener("pointermove", updatecardslide);
+      }
+
+      function init() {
+        let tl = gsap.timeline();
+
+        tl.to(cardslidesContainerEl.children, {
+          delay: 0.15,
+          duration: 0.5,
+          stagger: {
+            ease: "power4.inOut",
+            from: "right",
+            amount: 0.1,
+          },
+          "--cardslide-translateY-offset": "0%",
+        })
+          .to(
+            cardslideinfoslidesContainerEl
+              .querySelector(".current--infoslide")
+              .querySelectorAll(".text"),
+            {
+              delay: 0.5,
+              duration: 0.4,
+              stagger: 0.1,
+              opacity: 1,
+              translateY: 0,
+            }
+          )
+          .to(
+            [buttons.prev, buttons.next],
+            {
+              duration: 0.4,
+              opacity: 1,
+              pointerEvents: "all",
+            },
+            "-=0.4"
+          );
+      }
+
+      const waitForImages = () => {
+        const images = [...document.querySelectorAll("img")];
+        const totalImages = images.length;
+        let loadedImages = 0;
+        const loaderEl = document.querySelector(".loader span");
+
+        function init() {
+          let tl = gsap.timeline();
+
+          tl.to(cardslidesContainerEl.children, {
+            delay: 3, // Add a 0.5-second delay before sliding up
+            duration: 0.5,
+            stagger: {
+              ease: "power4.inOut",
+              from: "right",
+              amount: 0.1,
+            },
+            "--cardslide-translateY-offset": "0%",
+          })
+            .to(
+              cardslideinfoslidesContainerEl
+                .querySelector(".current--infoslide")
+                .querySelectorAll(".text"),
+              {
+                delay: 0.5, // Add a 0.5-second delay before showing the info slides
+                duration: 0.4,
+                stagger: 0.1,
+                opacity: 1,
+                translateY: 0,
+              }
+            )
+            .to(
+              [buttons.prev, buttons.next],
+              {
+                duration: 0.4,
+                opacity: 1,
+                pointerEvents: "all",
+              },
+              "-=0.4"
+            );
+        }
+        // gsap.set(cardslidesContainerEl.children, {
+        //   "--cardslide-translateY-offset": "100vh",
+        // });
+        // gsap.set(cardslideinfoslidesContainerEl.querySelector(".current--infoslide").querySelectorAll(".text"), {
+        //   translateY: "40px",
+        //   opacity: 0,
+
+        // });
+        // gsap.set([buttons.prev, buttons.next], {
+        //   pointerEvents: "none",
+        //   opacity: "0",
+        // });
+
+        images.forEach((image) => {
+          imagesLoaded(image, (instance) => {
+            if (instance.isComplete) {
+              loadedImages++;
+              let loadProgress = loadedImages / totalImages;
+
+              gsap.to(loaderEl, {
+                duration: 1,
+                scaleX: loadProgress,
+                backgroundColor: `hsl(${loadProgress * 120}, 100%, 50%`,
+              });
+
+              if (totalImages == loadedImages) {
+                gsap
+                  .timeline()
+                  .to(".loading__wrappslideer", {
+                    duration: 0.8,
+                    opacity: 0,
+                    pointerEvents: "none",
+                  })
+                  .call(() => init());
+              }
+            }
+          });
+        });
+      };
+
+      waitForImages();
+    </script>
+  </body>
+</html>
