@@ -2776,7 +2776,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
   height: 645px;
 }
-
+.single-feature{
+  height: 100% !important;
+}
 .about-video-right .play-btn {
   z-index: 2;
 }

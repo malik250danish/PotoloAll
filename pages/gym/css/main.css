@@ -2791,6 +2791,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #f1f9ff;
 }
 
+.single-feature{
+  height: 100% !important;
+}
 .about-video-area .vdo-bg:after {
   right: 0;
   width: 70%;
