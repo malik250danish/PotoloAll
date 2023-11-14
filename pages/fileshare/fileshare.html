@@ -67,466 +67,6 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-    <style>
-      .preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-
-        background: url("./img/FirstBanner2.png");
-        /* background-color: #15B039; */
-        overflow: hidden;
-        z-index: 10000000;
-      }
-
-      .preloader .text-container {
-        display: flex;
-        flex-direction: row;
-        gap: 1em;
-        overflow: hidden;
-        color: white;
-        opacity: 0;
-      }
-      .text-container h1 {
-        color: White !important;
-      }
-    </style>
-
-    <!-- Line Start  -->
-
-    <style>
-      #mvArea {
-        position: absolute;
-        width: 100px;
-        height: 150px;
-        bottom: 0px;
-      }
-
-      #mvArea .scrollNavWrap {
-        position: absolute;
-        width: 30px;
-        height: 130px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 1;
-        animation: startTxtArea 2.1s;
-      }
-
-      #mvArea .scrollNavWrap .scrollNav {
-        position: absolute;
-        top: 0;
-        color: #1ab33e;
-        font-size: 15px;
-        font-weight: 800 !important;
-        animation: equallyBound 1.4s ease infinite;
-      }
-
-      #mvArea .scrollNavWrap .scrollNav:after {
-        content: "";
-        position: absolute;
-        display: inline-block;
-        width: 1px;
-        height: 80px;
-        background-color: #1ab33e;
-        left: 14px;
-        bottom: -130px;
-        animation: lineMove 0.9s ease-in-out infinite;
-      }
-      #mvArea.resize .scrollNavWrap {
-        opacity: 0;
-      }
-
-      @media only screen and (min-width: 879px) {
-        .scrollNavWrap {
-          animation: none;
-        }
-      }
-
-      .onlyPc {
-        display: none !important;
-      }
-
-      @media only screen and (min-width: 879px) {
-        .onlyPc {
-          display: block !important;
-        }
-      }
-
-      @keyframes equallyBound {
-        0% {
-          top: 0;
-        }
-
-        50% {
-          top: 5px;
-        }
-
-        to {
-          top: 0;
-        }
-      }
-
-      @keyframes lineMove {
-        0% {
-          height: 0;
-          bottom: -12px;
-        }
-
-        15% {
-          height: 12px;
-          bottom: -24px;
-        }
-
-        50% {
-          height: 80px;
-          bottom: -92px;
-        }
-
-        85% {
-          height: 12px;
-          bottom: -118px;
-        }
-
-        to {
-          height: 0;
-          bottom: -130px;
-        }
-      }
-
-      .cd-headline {
-        position: absolute;
-        left: 0px !important;
-        top: 0px;
-      }
-
-      .sectionC {
-        position: static !important;
-      }
-
-      .likedownload {
-        position: absolute;
-        top: 90px;
-        left: 0px;
-      }
-      .likedownload img {
-        width: 35px;
-      }
-      .mainlikedownload {
-        display: flex;
-      }
-
-      .setheaderlinks a {
-        font-weight: 900;
-      }
-    </style>
-
-    <!-- Slider image start  -->
-    <style>
-      /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap"); */
-
-      :root {
-        --cardslide-width: 190px !important;
-        --cardslide-height: 300px;
-        --cardslide-transition-duration: 800ms;
-        --cardslide-transition-easing: ease;
-      }
-
-      .maincardslidercirle {
-        width: 100%;
-        height: 110vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-      }
-
-      button {
-        border: none;
-        background: none;
-        cursor: pointer;
-      }
-
-      .appslide {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* overflow: hidden; */
-      }
-
-      .cardslideList {
-        position: absolute;
-        width: calc(3 * var(--cardslide-width));
-        height: auto;
-      }
-
-      .cardslideList__btn {
-        --btn-size: 35px;
-        width: var(--btn-size);
-        height: var(--btn-size);
-        position: absolute;
-        top: 50%;
-        z-index: 100;
-      }
-
-      .cardslideList .cardslides__wrappslideer {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        perspective: 1000px;
-      }
-
-      .cardslide {
-        --cardslide-translateY-offset: 100vh;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%)
-          translateX(var(--cardslide-translateX-offset))
-          translateY(var(--cardslide-translateY-offset))
-          rotateY(var(--cardslide-rotation-offset))
-          scale(var(--cardslide-scale-offset));
-        display: inline-block;
-        width: var(--cardslide-width);
-        height: var(--cardslide-height);
-        transition: transform var(--cardslide-transition-duration)
-          var(--cardslide-transition-easing);
-        user-select: none;
-      }
-
-      .cardslide::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-
-        mix-blend-mode: darken;
-        /* background: #000;
-  z-index: 1;
-  transition: opacity var(--cardslide-transition-duration) var(--cardslide-transition-easing);
-  opacity: calc(1 - var(--opacity)); */
-      }
-
-      .cardslide__image {
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
-
-      .cardslide__image img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 90%;
-        mix-blend-mode: darken !important;
-      }
-
-      .cardslide.current--cardslide {
-        --current-cardslide-rotation-offset: 0;
-        --cardslide-translateX-offset: 0;
-        --cardslide-rotation-offset: var(--current-cardslide-rotation-offset);
-        --cardslide-scale-offset: 1.2;
-        --opacity: 0.8;
-      }
-
-      .cardslide.previous--cardslide {
-        --cardslide-translateX-offset: calc(-1 * var(--cardslide-width) * 1.1);
-        --cardslide-rotation-offset: 25deg;
-      }
-
-      .cardslide.next--cardslide {
-        --cardslide-translateX-offset: calc(var(--cardslide-width) * 1.1);
-        --cardslide-rotation-offset: -25deg;
-      }
-
-      .cardslide.previous--cardslide,
-      .cardslide.next--cardslide {
-        --cardslide-scale-offset: 0.9;
-        --opacity: 0.4;
-      }
-
-      .infoslideListslide {
-        position: absolute;
-        width: calc(3 * var(--cardslide-width));
-        height: var(--cardslide-height);
-        pointer-events: none;
-      }
-
-      .infoslideListslide .infoslide__wrappslideer {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        perspective: 1000px;
-        transform-style: preserve-3d;
-      }
-
-      .infoslide {
-        margin-bottom: calc(var(--cardslide-height) / 8);
-        margin-left: calc(var(--cardslide-width) / 1.5);
-        transform: translateZ(2rem);
-        transition: transform var(--cardslide-transition-duration)
-          var(--cardslide-transition-easing);
-      }
-
-      .infoslide .text {
-        position: relative;
-        font-family: "Montserrat";
-        font-size: calc(var(--cardslide-width) * var(--text-size-offset, 0.2));
-        white-space: nowrap;
-        color: #fff;
-        width: fit-content;
-      }
-
-      .infoslide .name,
-      .infoslide .location {
-        text-transform: uppercase;
-      }
-
-      .infoslide .location {
-        font-weight: 800;
-        --mg-left: 40px;
-        --text-size-offset: 0.12;
-        margin-left: var(--mg-left);
-        margin-bottom: calc(var(--mg-left) / 2);
-        padding-bottom: 0.8rem;
-      }
-
-      .infoslide .location::before,
-      .infoslide .location::after {
-        content: "";
-        position: absolute;
-        background: #fff;
-        left: 0%;
-        transform: translate(calc(-1 * var(--mg-left)), -50%);
-      }
-
-      .infoslide .location::before {
-        top: 50%;
-        width: 20px;
-        height: 5px;
-      }
-
-      .infoslide .location::after {
-        bottom: 0;
-        width: 60px;
-        height: 2px;
-      }
-
-      .infoslide .description {
-        --text-size-offset: 0.065;
-        font-weight: 500;
-      }
-
-      .infoslide.current--infoslide {
-        opacity: 1;
-        display: block;
-      }
-
-      .infoslide.previous--infoslide,
-      .infoslide.next--infoslide {
-        opacity: 0;
-        display: none;
-      }
-
-      .loading__wrappslideer {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #000;
-        z-index: 200;
-      }
-
-      .loading__wrappslideer .loader--text {
-        color: #fff;
-        font-family: "Montserrat";
-        font-weight: 500;
-        margin-bottom: 1.4rem;
-      }
-
-      .loading__wrappslideer .loader {
-        position: relative;
-        width: 200px;
-        height: 2px;
-        background: rgba(255, 255, 255, 0.25);
-      }
-
-      .loading__wrappslideer .loader span {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgb(255, 0, 0);
-        transform: scaleX(0);
-        transform-origin: left;
-      }
-
-      @media only screen and (min-width: 800px) {
-        :root {
-          --cardslide-width: 250px;
-          --cardslide-height: 400px;
-        }
-      }
-      @media only screen and (min-width: 800px) {
-        :root {
-          --cardslide-width: 250px;
-          --cardslide-height: 400px;
-        }
-      }
-
-      .support {
-        position: absolute;
-        right: 10px;
-        bottom: 10px;
-        padding: 10px;
-        display: flex;
-      }
-
-      .support a {
-        margin: 0 10px;
-        color: #fff;
-        font-size: 1.8rem;
-        backface-visibility: hidden;
-        transition: all 150ms ease;
-      }
-
-      .support a:hover {
-        transform: scale(1.1);
-      }
-      .is-full-width {
-        font-size: 15px !important;
-      }
-
-      .gymPic {
-        height: 400px !important;
-      }
-      .expertimg {
-        height: 100px !important;
-      }
-    </style>
-    <!-- Slider image End  -->
   </head>
 
   <body>
@@ -569,15 +109,15 @@
                 <h1 class="cd-headline clip is-full-width">
                   <span class="headerFont">Be POTOLO & </span>
                   <span class="cd-words-wrapper headerFont">
-                    <b class="is-visible">Order Food </b>
-                    <b>Request a Ride</b>
-                    <b>Call a Handyman </b>
-                    <b>Send your Parcel </b>
-                    <b>Request a Dry Cleaner </b>
-                    <b>Take care of your health </b>
-                    <b>Track your kids' school bus </b>
-                    <b>Share or backup your files</b>
-                    <b>Buy or Sell from the communit</b>
+                    <b class="is-visible">Share files with ease. </b>
+                    <b>Secure cloud storage solution. </b>
+                    <b>Collaborate on shared documents. </b>
+                    <b>Organise files efficiently. </b>
+                    <b>Access files anywhere, anytime. </b>
+                    <b>Streamline team file-sharing. </b>
+                    <b>Simplify document collaboration. </b>
+                    <b>Ensure data security.</b>
+                    <b>User-friendly file sharing. </b>
                     <!-- <b class="is-visible">resteez</b>
                     <b>ridal </b>
                     <b>Yfitness</b>
@@ -679,8 +219,11 @@
             <div class="section-title text-center">
               <h2>Unique Features</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                The expert technician for our file sharing app possesses
+                extensive knowledge in system architecture, security protocols,
+                and seamless integration. Their expertise ensures optimal
+                performance, data security, and efficient collaboration for
+                users.
               </p>
             </div>
           </div>
@@ -694,8 +237,11 @@
                 <h3 class="pt-5">Expert Technicians</h3>
               </a>
               <p>
-                Usage of the Internet is becoming more common due to rapid
-                advancement of technology and power.
+                The expert technician for our file sharing app possesses
+                extensive knowledge in system architecture, security protocols,
+                and seamless integration. Their expertise ensures optimal
+                performance, data security, and efficient collaboration for
+                users.
               </p>
             </div>
           </div>
@@ -707,8 +253,10 @@
                 <h3 class="pt-5">Professional Service</h3>
               </a>
               <p>
-                Usage of the Internet is becoming more common due to rapid
-                advancement of technology and power.
+                Our file sharing app offers personalised services tailored to
+                individual needs. Enjoy hassle-free file organisation, quick
+                access to personal documents, and seamless sharing, all with a
+                user-friendly interface designed for convenience.
               </p>
             </div>
           </div>
@@ -720,8 +268,10 @@
                 <h3 class="pt-5">Great Support</h3>
               </a>
               <p>
-                Usage of the Internet is becoming more common due to rapid
-                advancement of technology and power.
+                Experience unparalleled support with our file sharing app. Our
+                dedicated team is committed to addressing your queries promptly,
+                ensuring a smooth and reliable file sharing experience. Count on
+                us!
               </p>
             </div>
           </div>
@@ -746,18 +296,11 @@
             os="fade-up"
             os-duration="1500"
           >
-            <h1>
-              Revolutionize Dining <br />
-              with Resteez: Your <br />
-              Ultimate Restaurant App
-              <!-- We Believe that <br>
-							Interior beautifies the <br>
-							Total Architecture -->
-            </h1>
+            <h1>Efficient File Organisation</h1>
             <p>
-              Your essential restaurant app for discovering, reserving, and
-              savoring the best dining experiences effortlessly. Explore, Book,
-              Enjoy
+              Experience streamlined file management with our file sharing app.
+              Create, edit, and organise your files effortlessly, enhancing
+              productivity and keeping your digital workspace tidy.
             </p>
           </div>
         </div>
@@ -768,20 +311,12 @@
             os="fade-up"
             os-duration="1500"
           >
-            <h1>
-              Revolutionize Dining <br />
-              with Resteez: Your <br />
-              Ultimate Restaurant App
-              <!-- We Believe that <br>
-							Interior beautifies the <br>
-							Total Architecture -->
-            </h1>
+            <h1>Secure Data Collaboration:</h1>
             <p>
-              Cruise with confidence using Ridel, your trusted ride service app.
-              Our platform ensures safe, reliable, and convenient
-              transportation, connecting you to your destination seamlessly. Say
-              goodbye to travel worries and hello to stress-free journeys with
-              Ridel
+              Trust in our app's robust security protocols for safe and
+              confidential file sharing. Enjoy seamless collaboration with
+              colleagues, ensuring that your shared data is protected against
+              unauthorised access.
             </p>
             <div class="download-button d-flex flex-row justify-content-start">
               <div class="buttons flex-row d-flex">
@@ -837,19 +372,12 @@
             os="zoom-in"
             os-duration="1500"
           >
-            <h1>
-              Made With Love <br />
-              with Resteez: Your <br />
-              Ultimate Restaurant App
-              <!-- We Believe that <br>
-							Interior beautifies the <br>
-							Total Architecture -->
-            </h1>
+            <h1>24/7 Expert Technical Support:</h1>
             <p>
-              File Share Service is your go-to solution for swift and secure
-              file sharing. With our user-friendly app, you can send documents,
-              images, and more with ease. Say goodbye to email attachments and
-              embrace the future of hassle-free file sharing.
+              Benefit from continuous technical support provided by our
+              experienced team. Whether you have questions, encounter issues, or
+              need assistance, our experts are available around the clock to
+              ensure a smooth file sharing experience.
             </p>
             <div class="download-button d-flex flex-row justify-content-start">
               <div class="buttons flex-row d-flex">

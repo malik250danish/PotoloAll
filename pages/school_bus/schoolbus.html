@@ -68,460 +68,8 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-    <style>
-      .preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-
-        background: url("./img/FirstBanner2.png");
-        /* background-color: #15B039; */
-        overflow: hidden;
-        z-index: 10000000;
-      }
-
-      .preloader .text-container {
-        display: flex;
-        flex-direction: row;
-        gap: 1em;
-        overflow: hidden;
-        color: white;
-        opacity: 0;
-      }
-      .text-container h1 {
-        color: White !important;
-      }
-    </style>
-
-    <!-- Line Start  -->
-
-    <style>
-      #mvArea {
-        position: absolute;
-        width: 100px;
-        height: 150px;
-        bottom: 0px;
-      }
-
-      #mvArea .scrollNavWrap {
-        position: absolute;
-        width: 30px;
-        height: 130px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 1;
-        animation: startTxtArea 2.1s;
-      }
-
-      #mvArea .scrollNavWrap .scrollNav {
-        position: absolute;
-        top: 0;
-        color: #1ab33e;
-        font-size: 15px;
-        font-weight: 800 !important;
-        animation: equallyBound 1.4s ease infinite;
-      }
-
-      #mvArea .scrollNavWrap .scrollNav:after {
-        content: "";
-        position: absolute;
-        display: inline-block;
-        width: 1px;
-        height: 80px;
-        background-color: #1ab33e;
-        left: 14px;
-        bottom: -130px;
-        animation: lineMove 0.9s ease-in-out infinite;
-      }
-      #mvArea.resize .scrollNavWrap {
-        opacity: 0;
-      }
-
-      @media only screen and (min-width: 879px) {
-        .scrollNavWrap {
-          animation: none;
-        }
-      }
-
-      .onlyPc {
-        display: none !important;
-      }
-
-      @media only screen and (min-width: 879px) {
-        .onlyPc {
-          display: block !important;
-        }
-      }
-
-      @keyframes equallyBound {
-        0% {
-          top: 0;
-        }
-
-        50% {
-          top: 5px;
-        }
-
-        to {
-          top: 0;
-        }
-      }
-
-      @keyframes lineMove {
-        0% {
-          height: 0;
-          bottom: -12px;
-        }
-
-        15% {
-          height: 12px;
-          bottom: -24px;
-        }
-
-        50% {
-          height: 80px;
-          bottom: -92px;
-        }
-
-        85% {
-          height: 12px;
-          bottom: -118px;
-        }
-
-        to {
-          height: 0;
-          bottom: -130px;
-        }
-      }
-
-      .cd-headline {
-        position: absolute;
-        left: 0px !important;
-        top: 0px;
-      }
-
-      .sectionC {
-        position: static !important;
-      }
-
-      .likedownload {
-        position: absolute;
-        top: 90px;
-        left: 0px;
-      }
-      .likedownload img {
-        width: 35px;
-      }
-      .mainlikedownload {
-        display: flex;
-      }
-
-      .setheaderlinks a {
-        font-weight: 900;
-      }
-    </style>
-
     <!-- Slider image start  -->
-    <style>
-      /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap"); */
 
-      :root {
-        --cardslide-width: 190px !important;
-        --cardslide-height: 300px;
-        --cardslide-transition-duration: 800ms;
-        --cardslide-transition-easing: ease;
-      }
-
-      .maincardslidercirle {
-        width: 100%;
-        height: 110vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-      }
-
-      button {
-        border: none;
-        background: none;
-        cursor: pointer;
-      }
-
-      .appslide {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* overflow: hidden; */
-      }
-
-      .cardslideList {
-        position: absolute;
-        width: calc(3 * var(--cardslide-width));
-        height: auto;
-      }
-
-      .cardslideList__btn {
-        --btn-size: 35px;
-        width: var(--btn-size);
-        height: var(--btn-size);
-        position: absolute;
-        top: 50%;
-        z-index: 100;
-      }
-
-      .cardslideList .cardslides__wrappslideer {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        perspective: 1000px;
-      }
-
-      .cardslide {
-        --cardslide-translateY-offset: 100vh;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%)
-          translateX(var(--cardslide-translateX-offset))
-          translateY(var(--cardslide-translateY-offset))
-          rotateY(var(--cardslide-rotation-offset))
-          scale(var(--cardslide-scale-offset));
-        display: inline-block;
-        width: var(--cardslide-width);
-        height: var(--cardslide-height);
-        transition: transform var(--cardslide-transition-duration)
-          var(--cardslide-transition-easing);
-        user-select: none;
-      }
-
-      .cardslide::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-
-        mix-blend-mode: darken;
-        /* background: #000;
-  z-index: 1;
-  transition: opacity var(--cardslide-transition-duration) var(--cardslide-transition-easing);
-  opacity: calc(1 - var(--opacity)); */
-      }
-
-      .cardslide__image {
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
-
-      .cardslide__image img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 90%;
-        mix-blend-mode: darken !important;
-      }
-
-      .cardslide.current--cardslide {
-        --current-cardslide-rotation-offset: 0;
-        --cardslide-translateX-offset: 0;
-        --cardslide-rotation-offset: var(--current-cardslide-rotation-offset);
-        --cardslide-scale-offset: 1.2;
-        --opacity: 0.8;
-      }
-
-      .cardslide.previous--cardslide {
-        --cardslide-translateX-offset: calc(-1 * var(--cardslide-width) * 1.1);
-        --cardslide-rotation-offset: 25deg;
-      }
-
-      .cardslide.next--cardslide {
-        --cardslide-translateX-offset: calc(var(--cardslide-width) * 1.1);
-        --cardslide-rotation-offset: -25deg;
-      }
-
-      .cardslide.previous--cardslide,
-      .cardslide.next--cardslide {
-        --cardslide-scale-offset: 0.9;
-        --opacity: 0.4;
-      }
-
-      .infoslideListslide {
-        position: absolute;
-        width: calc(3 * var(--cardslide-width));
-        height: var(--cardslide-height);
-        pointer-events: none;
-      }
-
-      .infoslideListslide .infoslide__wrappslideer {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        perspective: 1000px;
-        transform-style: preserve-3d;
-      }
-
-      .infoslide {
-        margin-bottom: calc(var(--cardslide-height) / 8);
-        margin-left: calc(var(--cardslide-width) / 1.5);
-        transform: translateZ(2rem);
-        transition: transform var(--cardslide-transition-duration)
-          var(--cardslide-transition-easing);
-      }
-
-      .infoslide .text {
-        position: relative;
-        font-family: "Montserrat";
-        font-size: calc(var(--cardslide-width) * var(--text-size-offset, 0.2));
-        white-space: nowrap;
-        color: #fff;
-        width: fit-content;
-      }
-
-      .infoslide .name,
-      .infoslide .location {
-        text-transform: uppercase;
-      }
-
-      .infoslide .location {
-        font-weight: 800;
-        --mg-left: 40px;
-        --text-size-offset: 0.12;
-        margin-left: var(--mg-left);
-        margin-bottom: calc(var(--mg-left) / 2);
-        padding-bottom: 0.8rem;
-      }
-
-      .infoslide .location::before,
-      .infoslide .location::after {
-        content: "";
-        position: absolute;
-        background: #fff;
-        left: 0%;
-        transform: translate(calc(-1 * var(--mg-left)), -50%);
-      }
-
-      .infoslide .location::before {
-        top: 50%;
-        width: 20px;
-        height: 5px;
-      }
-
-      .infoslide .location::after {
-        bottom: 0;
-        width: 60px;
-        height: 2px;
-      }
-
-      .infoslide .description {
-        --text-size-offset: 0.065;
-        font-weight: 500;
-      }
-
-      .infoslide.current--infoslide {
-        opacity: 1;
-        display: block;
-      }
-
-      .infoslide.previous--infoslide,
-      .infoslide.next--infoslide {
-        opacity: 0;
-        display: none;
-      }
-
-      .loading__wrappslideer {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #000;
-        z-index: 200;
-      }
-
-      .loading__wrappslideer .loader--text {
-        color: #fff;
-        font-family: "Montserrat";
-        font-weight: 500;
-        margin-bottom: 1.4rem;
-      }
-
-      .loading__wrappslideer .loader {
-        position: relative;
-        width: 200px;
-        height: 2px;
-        background: rgba(255, 255, 255, 0.25);
-      }
-
-      .loading__wrappslideer .loader span {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgb(255, 0, 0);
-        transform: scaleX(0);
-        transform-origin: left;
-      }
-
-      @media only screen and (min-width: 800px) {
-        :root {
-          --cardslide-width: 250px;
-          --cardslide-height: 400px;
-        }
-      }
-      @media only screen and (min-width: 800px) {
-        :root {
-          --cardslide-width: 250px;
-          --cardslide-height: 400px;
-        }
-      }
-
-      .support {
-        position: absolute;
-        right: 10px;
-        bottom: 10px;
-        padding: 10px;
-        display: flex;
-      }
-
-      .support a {
-        margin: 0 10px;
-        color: #fff;
-        font-size: 1.8rem;
-        backface-visibility: hidden;
-        transition: all 150ms ease;
-      }
-
-      .support a:hover {
-        transform: scale(1.1);
-      }
-      .is-full-width {
-        font-size: 15px !important;
-      }
-      .headFont {
-        font-size: 25px !important;
-      }
-    </style>
     <!-- Slider image End  -->
   </head>
 
@@ -565,20 +113,15 @@
                 <h1 class="cd-headline clip is-full-width">
                   <span class="headerFont">Be POTOLO & </span>
                   <span class="cd-words-wrapper headerFont">
-                    <b class="is-visible">Order Food </b>
-                    <b>Request a Ride</b>
-                    <b>Call a Handyman </b>
-                    <b>Send your Parcel </b>
-                    <b>Request a Dry Cleaner </b>
-                    <b>Take care of your health </b>
-                    <b>Track your kids' school bus </b>
-                    <b>Share or backup your files</b>
-                    <b>Buy or Sell from the communit</b>
-                    <!-- <b class="is-visible">resteez</b>
-                    <b>ridal </b>
-                    <b>Yfitness</b>
-                    <b>joy App</b>
-                    <b>fleet App</b> -->
+                    <b class="is-visible">Track school bus live. </b>
+                    <b>Receive instant location updates. </b>
+                    <b>Set geofence for alerts. </b>
+                    <b>Know bus ETA always. </b>
+                    <b>Secure parent authentication system. </b>
+                    <b>Emergency alerts for safety. </b>
+                    <b>Access historical route data. </b>
+                    <b>Connect with the bus driver.</b>
+                    <b>Attendance tracking for security</b>
                   </span>
                 </h1>
 
@@ -671,8 +214,10 @@
             <div class="section-title text-center">
               <h2>Unique Features</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Our expert technician for the Bustrack app possesses a wealth of
+                experience in implementing cutting-edge GPS tracking technology,
+                ensuring seamless real-time updates, and prioritising the safety
+                and security of students
               </p>
             </div>
           </div>
@@ -685,8 +230,10 @@
                 <h3>Expert Technicians</h3>
               </a>
               <p>
-                Usage of the Internet is becoming more common due to rapid
-                advancement of technology and power.
+                Experience personalised service with our Bustrack app. Tailor
+                notifications, set preferences, and receive real-time updates on
+                your child's school bus location. We prioritize your child's
+                safety and your peace of mind.
               </p>
             </div>
           </div>
@@ -697,8 +244,10 @@
                 <h3>Professional Service</h3>
               </a>
               <p>
-                Usage of the Internet is becoming more common due to rapid
-                advancement of technology and power.
+                Count on unparalleled support with our Bustrack app. Our
+                dedicated team is committed to addressing your concerns
+                promptly, ensuring a secure and reliable tracking experience for
+                your child's school bus.
               </p>
             </div>
           </div>
@@ -735,18 +284,11 @@
             os="fade-up"
             os-duration="1500"
           >
-            <h1>
-              Revolutionize Dining <br />
-              with Resteez: Your <br />
-              Ultimate Restaurant App
-              <!-- We Believe that <br>
-							Interior beautifies the <br>
-							Total Architecture -->
-            </h1>
+            <h1>Live Bus Tracking</h1>
             <p>
-              Your essential restaurant app for discovering, reserving, and
-              savoring the best dining experiences effortlessly. Explore, Book,
-              Enjoy
+              Stay connected with your child's school bus in real-time. Our
+              Bustrack app provides live tracking, offering parents peace of
+              mind and the ability to monitor their child's journey.
             </p>
             <a class="primary-btn text-uppercase" href="#">Get Details</a>
           </div>
@@ -758,20 +300,11 @@
             os="fade-up"
             os-duration="1500"
           >
-            <h1>
-              "Ridel"Your Key <br />
-              to Smooth Travel – <br />
-              Wherever, Whenever
-              <!-- We Believe that <br>
-							Interior beautifies the <br>
-							Total Architecture -->
-            </h1>
+            <h1>Customizable Alerts and Notifications</h1>
             <p>
-              Cruise with confidence using Ridel, your trusted ride service app.
-              Our platform ensures safe, reliable, and convenient
-              transportation, connecting you to your destination seamlessly. Say
-              goodbye to travel worries and hello to stress-free journeys with
-              Ridel
+              Tailor your experience with personalised alerts. Set geofences for
+              specific locations, receive estimated time of arrival (ETA)
+              notifications, and choose the alerts that matter most to you.
             </p>
             <div class="download-button d-flex flex-row justify-content-start">
               <div class="buttons flex-row d-flex">
@@ -827,19 +360,12 @@
             os="zoom-in"
             os-duration="1500"
           >
-            <h1>
-              Effortless File <br />
-              Sharing with File <br />
-              Share Service
-              <!-- We Believe that <br>
-							Interior beautifies the <br>
-							Total Architecture -->
-            </h1>
+            <h1>Secure and Reliable Suppor</h1>
             <p>
-              File Share Service is your go-to solution for swift and secure
-              file sharing. With our user-friendly app, you can send documents,
-              images, and more with ease. Say goodbye to email attachments and
-              embrace the future of hassle-free file sharing.
+              Rely on our secure and reliable support system. With encrypted
+              data transfer and secure parent authentication, we prioritise the
+              safety of your child and provide unmatched assistance for a
+              worry-free experience.
             </p>
             <div class="download-button d-flex flex-row justify-content-start">
               <div class="buttons flex-row d-flex">

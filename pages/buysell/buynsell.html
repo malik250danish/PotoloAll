@@ -100,429 +100,6 @@
     </style>
 
     <!-- Line Start  -->
-
-    <style>
-      #mvArea {
-        position: absolute;
-        width: 100px;
-        height: 150px;
-        bottom: 0px;
-      }
-
-      #mvArea .scrollNavWrap {
-        position: absolute;
-        width: 30px;
-        height: 130px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 1;
-        animation: startTxtArea 2.1s;
-      }
-
-      #mvArea .scrollNavWrap .scrollNav {
-        position: absolute;
-        top: 0;
-        color: #1ab33e;
-        font-size: 15px;
-        font-weight: 800 !important;
-        animation: equallyBound 1.4s ease infinite;
-      }
-
-      #mvArea .scrollNavWrap .scrollNav:after {
-        content: "";
-        position: absolute;
-        display: inline-block;
-        width: 1px;
-        height: 80px;
-        background-color: #1ab33e;
-        left: 14px;
-        bottom: -130px;
-        animation: lineMove 0.9s ease-in-out infinite;
-      }
-      #mvArea.resize .scrollNavWrap {
-        opacity: 0;
-      }
-
-      @media only screen and (min-width: 879px) {
-        .scrollNavWrap {
-          animation: none;
-        }
-      }
-
-      .onlyPc {
-        display: none !important;
-      }
-
-      @media only screen and (min-width: 879px) {
-        .onlyPc {
-          display: block !important;
-        }
-      }
-
-      @keyframes equallyBound {
-        0% {
-          top: 0;
-        }
-
-        50% {
-          top: 5px;
-        }
-
-        to {
-          top: 0;
-        }
-      }
-
-      @keyframes lineMove {
-        0% {
-          height: 0;
-          bottom: -12px;
-        }
-
-        15% {
-          height: 12px;
-          bottom: -24px;
-        }
-
-        50% {
-          height: 80px;
-          bottom: -92px;
-        }
-
-        85% {
-          height: 12px;
-          bottom: -118px;
-        }
-
-        to {
-          height: 0;
-          bottom: -130px;
-        }
-      }
-
-      .cd-headline {
-        position: absolute;
-        left: 0px !important;
-        top: 0px;
-      }
-
-      .sectionC {
-        position: static !important;
-      }
-
-      .likedownload {
-        position: absolute;
-        top: 90px;
-        left: 0px;
-      }
-      .likedownload img {
-        width: 35px;
-      }
-      .mainlikedownload {
-        display: flex;
-      }
-
-      .setheaderlinks a {
-        font-weight: 900;
-      }
-    </style>
-
-    <!-- Slider image start  -->
-    <style>
-      /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap"); */
-
-      :root {
-        --cardslide-width: 190px !important;
-        --cardslide-height: 300px;
-        --cardslide-transition-duration: 800ms;
-        --cardslide-transition-easing: ease;
-      }
-
-      .maincardslidercirle {
-        width: 100%;
-        height: 110vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-      }
-
-      button {
-        border: none;
-        background: none;
-        cursor: pointer;
-      }
-
-      .appslide {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* overflow: hidden; */
-      }
-
-      .cardslideList {
-        position: absolute;
-        width: calc(3 * var(--cardslide-width));
-        height: auto;
-      }
-
-      .cardslideList__btn {
-        --btn-size: 35px;
-        width: var(--btn-size);
-        height: var(--btn-size);
-        position: absolute;
-        top: 50%;
-        z-index: 100;
-      }
-
-      .cardslideList .cardslides__wrappslideer {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        perspective: 1000px;
-      }
-
-      .cardslide {
-        --cardslide-translateY-offset: 100vh;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%)
-          translateX(var(--cardslide-translateX-offset))
-          translateY(var(--cardslide-translateY-offset))
-          rotateY(var(--cardslide-rotation-offset))
-          scale(var(--cardslide-scale-offset));
-        display: inline-block;
-        width: var(--cardslide-width);
-        height: var(--cardslide-height);
-        transition: transform var(--cardslide-transition-duration)
-          var(--cardslide-transition-easing);
-        user-select: none;
-      }
-
-      .cardslide::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-
-        mix-blend-mode: darken;
-        /* background: #000;
-  z-index: 1;
-  transition: opacity var(--cardslide-transition-duration) var(--cardslide-transition-easing);
-  opacity: calc(1 - var(--opacity)); */
-      }
-
-      .cardslide__image {
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
-
-      .cardslide__image img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 90%;
-        mix-blend-mode: darken !important;
-      }
-
-      .cardslide.current--cardslide {
-        --current-cardslide-rotation-offset: 0;
-        --cardslide-translateX-offset: 0;
-        --cardslide-rotation-offset: var(--current-cardslide-rotation-offset);
-        --cardslide-scale-offset: 1.2;
-        --opacity: 0.8;
-      }
-
-      .cardslide.previous--cardslide {
-        --cardslide-translateX-offset: calc(-1 * var(--cardslide-width) * 1.1);
-        --cardslide-rotation-offset: 25deg;
-      }
-
-      .cardslide.next--cardslide {
-        --cardslide-translateX-offset: calc(var(--cardslide-width) * 1.1);
-        --cardslide-rotation-offset: -25deg;
-      }
-
-      .cardslide.previous--cardslide,
-      .cardslide.next--cardslide {
-        --cardslide-scale-offset: 0.9;
-        --opacity: 0.4;
-      }
-
-      .infoslideListslide {
-        position: absolute;
-        width: calc(3 * var(--cardslide-width));
-        height: var(--cardslide-height);
-        pointer-events: none;
-      }
-
-      .infoslideListslide .infoslide__wrappslideer {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        perspective: 1000px;
-        transform-style: preserve-3d;
-      }
-
-      .infoslide {
-        margin-bottom: calc(var(--cardslide-height) / 8);
-        margin-left: calc(var(--cardslide-width) / 1.5);
-        transform: translateZ(2rem);
-        transition: transform var(--cardslide-transition-duration)
-          var(--cardslide-transition-easing);
-      }
-
-      .infoslide .text {
-        position: relative;
-        font-family: "Montserrat";
-        font-size: calc(var(--cardslide-width) * var(--text-size-offset, 0.2));
-        white-space: nowrap;
-        color: #fff;
-        width: fit-content;
-      }
-
-      .infoslide .name,
-      .infoslide .location {
-        text-transform: uppercase;
-      }
-
-      .infoslide .location {
-        font-weight: 800;
-        --mg-left: 40px;
-        --text-size-offset: 0.12;
-        margin-left: var(--mg-left);
-        margin-bottom: calc(var(--mg-left) / 2);
-        padding-bottom: 0.8rem;
-      }
-
-      .infoslide .location::before,
-      .infoslide .location::after {
-        content: "";
-        position: absolute;
-        background: #fff;
-        left: 0%;
-        transform: translate(calc(-1 * var(--mg-left)), -50%);
-      }
-
-      .infoslide .location::before {
-        top: 50%;
-        width: 20px;
-        height: 5px;
-      }
-
-      .infoslide .location::after {
-        bottom: 0;
-        width: 60px;
-        height: 2px;
-      }
-
-      .infoslide .description {
-        --text-size-offset: 0.065;
-        font-weight: 500;
-      }
-
-      .infoslide.current--infoslide {
-        opacity: 1;
-        display: block;
-      }
-
-      .infoslide.previous--infoslide,
-      .infoslide.next--infoslide {
-        opacity: 0;
-        display: none;
-      }
-
-      .loading__wrappslideer {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #000;
-        z-index: 200;
-      }
-
-      .loading__wrappslideer .loader--text {
-        color: #fff;
-        font-family: "Montserrat";
-        font-weight: 500;
-        margin-bottom: 1.4rem;
-      }
-
-      .loading__wrappslideer .loader {
-        position: relative;
-        width: 200px;
-        height: 2px;
-        background: rgba(255, 255, 255, 0.25);
-      }
-
-      .loading__wrappslideer .loader span {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgb(255, 0, 0);
-        transform: scaleX(0);
-        transform-origin: left;
-      }
-
-      @media only screen and (min-width: 800px) {
-        :root {
-          --cardslide-width: 250px;
-          --cardslide-height: 400px;
-        }
-      }
-      @media only screen and (min-width: 800px) {
-        :root {
-          --cardslide-width: 250px;
-          --cardslide-height: 400px;
-        }
-      }
-
-      .support {
-        position: absolute;
-        right: 10px;
-        bottom: 10px;
-        padding: 10px;
-        display: flex;
-      }
-
-      .support a {
-        margin: 0 10px;
-        color: #fff;
-        font-size: 1.8rem;
-        backface-visibility: hidden;
-        transition: all 150ms ease;
-      }
-
-      .support a:hover {
-        transform: scale(1.1);
-      }
-      .is-full-width {
-        font-size: 15px !important;
-      }
-      .headFont {
-        font-size: 25px !important;
-      }
-    </style>
-    <!-- Slider image End  -->
   </head>
 
   <body>
@@ -565,20 +142,15 @@
                 <h1 class="cd-headline clip is-full-width">
                   <span class="headerFont">Be POTOLO & </span>
                   <span class="cd-words-wrapper headerFont">
-                    <b class="is-visible">Order Food </b>
-                    <b>Request a Ride</b>
-                    <b>Call a Handyman </b>
-                    <b>Send your Parcel </b>
-                    <b>Request a Dry Cleaner </b>
-                    <b>Take care of your health </b>
-                    <b>Track your kids' school bus </b>
-                    <b>Share or backup your files</b>
-                    <b>Buy or Sell from the communit</b>
-                    <!-- <b class="is-visible">resteez</b>
-                    <b>ridal </b>
-                    <b>Yfitness</b>
-                    <b>joy App</b>
-                    <b>fleet App</b> -->
+                    <b class="is-visible">Shop or sell anything. </b>
+                    <b>Easy listing, quick selling. </b>
+                    <b>Secure transactions, buyer protection. </b>
+                    <b>Browse, buy, enjoy. </b>
+                    <b>Sell unused items fast. </b>
+                    <b>Negotiate prices, make deals. </b>
+                    <b>Discover deals, save money. </b>
+                    <b>Find local sellers.</b>
+                    <b>Safe, simple transactions. </b>
                   </span>
                 </h1>
 
@@ -683,10 +255,13 @@
             <div class="single-feature">
               <a href="#" class="title">
                 <img src="./img/cardimgTwo.png" alt="Img" />
-                <h3>Augmented Reality (AR) Integration</h3>
+                <h3>Expert Technicians:</h3>
               </a>
               <p>
-                Allow users to virtually try out products before purchasing using AR technology. This is particularly useful for items like furniture, clothing, or accessories.
+                Our expert technician for the buy and sell app brings a wealth
+                of experience in optimising the platform's performance, ensuring
+                seamless transactions, enhancing security protocols, and
+                providing technical excellence for users.
               </p>
             </div>
           </div>
@@ -694,10 +269,13 @@
             <div class="single-feature">
               <a href="#" class="title">
                 <img src="./img/cardimgOne.png" alt="Img" />
-                <h3>AI-Powered Recommendations</h3>
+                <h3>A Personal Services:</h3>
               </a>
               <p>
-                Implement machine learning algorithms to provide personalized product recommendations based on users' browsing and purchase history.
+                Our buy and sell app offers personalised services designed to
+                cater to your unique needs. Experience tailored recommendations,
+                exclusive deals, and a user-centric interface for a personalised
+                shopping and selling journey.
               </p>
             </div>
           </div>
@@ -705,167 +283,16 @@
             <div class="single-feature">
               <a href="#" class="title">
                 <img src="./img/cardimgThree.png" alt="Img" />
-                <h3>Real-Time Negotiation</h3>
+                <h3>Great Support</h3>
               </a>
               <p>
-                Include a feature that allows buyers and sellers to negotiate prices in real-time within the app, enhancing the interactive and dynamic nature of transactions.
+                Experience unparalleled support with our buy and sell app. Our
+                dedicated team is committed to addressing your queries promptly,
+                ensuring a smooth buying and selling experience. Count on us!
               </p>
             </div>
           </div>
         </div>
-
-
-        <!-- card unique changing  start -->
-        <div class="row mt-md-3">
-          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
-            <div class="single-feature">
-              <a href="#" class="title">
-                <img src="./img/cardimgTwo.png" alt="Img" />
-                <h3>Blockchain for Secure Transactions</h3>
-              </a>
-              <p>
-                Use blockchain technology to ensure secure and transparent transactions, providing a level of trust and security that traditional payment systems may lack.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
-            <div class="single-feature">
-              <a href="#" class="title">
-                <img src="./img/cardimgOne.png" alt="Img" />
-                <h3>Social Media Integration</h3>
-              </a>
-              <p>
-                Enable users to share their listings or purchases on their social media accounts directly from the app, increasing visibility and potentially driving more traffic.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
-            <div class="single-feature">
-              <a href="#" class="title">
-                <img src="./img/cardimgThree.png" alt="Img" />
-                <h3>Geo-Location Services</h3>
-              </a>
-              <p>
-                Implement location-based services to connect buyers and sellers in the same area, facilitating local transactions and reducing shipping costs.
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row mt-md-3">
-          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
-            <div class="single-feature">
-              <a href="#" class="title">
-                <img src="./img/cardimgTwo.png" alt="Img" />
-                <h3>Virtual Currency or Tokens</h3>
-              </a>
-              <p>
-                Introduce a virtual currency or token system within the app, encouraging user engagement and loyalty through rewards and discounts.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
-            <div class="single-feature">
-              <a href="#" class="title">
-                <img src="./img/cardimgOne.png" alt="Img" />
-                <h3>Smart Chatbots for Customer Support</h3>
-              </a>
-              <p>
-                Use AI-driven chatbots to provide instant and efficient customer support, helping users with inquiries, disputes, or general assistance.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
-            <div class="single-feature">
-              <a href="#" class="title">
-                <img src="./img/cardimgThree.png" alt="Img" />
-                <h3>Integration with Third-Party Services</h3>
-              </a>
-              <p>
-                Collaborate with other platforms or services, such as shipping providers or payment gateways, to streamline the overall user experience and provide additional value.
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row mt-md-3">
-          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
-            <div class="single-feature">
-              <a href="#" class="title">
-                <img src="./img/cardimgTwo.png" alt="Img" />
-                <h3>Subscription Models or Premium Features</h3>
-              </a>
-              <p>
-                Offer subscription plans for advanced features or enhanced visibility for sellers, providing a revenue stream while giving users options to enhance their experience.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
-            <div class="single-feature">
-              <a href="#" class="title">
-                <img src="./img/cardimgOne.png" alt="Img" />
-                <h3>Environmental and Social Impact Metrics</h3>
-              </a>
-              <p>
-                Include features that highlight the environmental or social impact of products, appealing to socially conscious consumers.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
-            <div class="single-feature">
-              <a href="#" class="title">
-                <img src="./img/cardimgThree.png" alt="Img" />
-                <h3>AR-Based Advertisements</h3>
-              </a>
-              <p>
-                Allow businesses to create AR-based advertisements for their products, providing a unique and immersive way to showcase items.
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div class="row mt-md-3">
-          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
-            <div class="single-feature">
-              <a href="#" class="title">
-                <img src="./img/cardimgTwo.png" alt="Img" />
-                <h3>Collaborative Shopping Lists                </h3>
-              </a>
-              <p>
-                Enable users to create and share collaborative shopping lists, making it easier for groups of people to plan and coordinate purchases.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
-            <div class="single-feature">
-              <a href="#" class="title">
-                <img src="./img/cardimgOne.png" alt="Img" />
-                <h3>Offline Mode</h3>
-              </a>
-              <p>
-                Implement a feature that allows users to browse and save items even when offline, enhancing usability in areas with poor connectivity.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" os="flip-left" os-duration="1500">
-            <div class="single-feature">
-              <a href="#" class="title">
-                <img src="./img/cardimgThree.png" alt="Img" />
-                <h3>Customizable User Profiles</h3>
-              </a>
-              <p>
-                Give users the ability to create unique and personalized profiles, showcasing their buying and selling history, preferences, and reviews.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- card unique changing  end -->
-
-
       </div>
     </section>
     <!-- End feature Area -->
@@ -886,18 +313,11 @@
             os="fade-up"
             os-duration="1500"
           >
-            <h1>
-              Revolutionize Dining <br />
-              with Resteez: Your <br />
-              Ultimate Restaurant App
-              <!-- We Believe that <br>
-							Interior beautifies the <br>
-							Total Architecture -->
-            </h1>
+            <h1>Effortless Listing and Selling</h1>
             <p>
-              Your essential restaurant app for discovering, reserving, and
-              savoring the best dining experiences effortlessly. Explore, Book,
-              Enjoy
+              Simplify the selling process with our buy and sell app. Create
+              detailed listings effortlessly, showcase your items with images,
+              and reach potential buyers seamlessly.
             </p>
             <a class="primary-btn text-uppercase" href="#">Get Details</a>
           </div>
@@ -909,20 +329,12 @@
             os="fade-up"
             os-duration="1500"
           >
-            <h1>
-              "Ridel"Your Key <br />
-              to Smooth Travel – <br />
-              Wherever, Whenever
-              <!-- We Believe that <br>
-							Interior beautifies the <br>
-							Total Architecture -->
-            </h1>
+            <h1>Secure Transactions and Buyer Protection</h1>
             <p>
-              Cruise with confidence using Ridel, your trusted ride service app.
-              Our platform ensures safe, reliable, and convenient
-              transportation, connecting you to your destination seamlessly. Say
-              goodbye to travel worries and hello to stress-free journeys with
-              Ridel
+              Trust in our app's robust security measures for safe and secure
+              transactions. We prioritise the protection of your financial
+              information and offer buyer safeguards to ensure a worry-free
+              buying experience.
             </p>
             <div class="download-button d-flex flex-row justify-content-start">
               <div class="buttons flex-row d-flex">
@@ -978,19 +390,12 @@
             os="zoom-in"
             os-duration="1500"
           >
-            <h1>
-              Effortless File <br />
-              Sharing with File <br />
-              Share Service
-              <!-- We Believe that <br>
-							Interior beautifies the <br>
-							Total Architecture -->
-            </h1>
+            <h1>Personalized Shopping Experience</h1>
             <p>
-              File Share Service is your go-to solution for swift and secure
-              file sharing. With our user-friendly app, you can send documents,
-              images, and more with ease. Say goodbye to email attachments and
-              embrace the future of hassle-free file sharing.
+              Enjoy a personalised shopping journey with our buy and sell app.
+              Receive tailored recommendations, exclusive deals, and a
+              user-centric interface designed to enhance your overall buying and
+              selling satisfaction.
             </p>
             <div class="download-button d-flex flex-row justify-content-start">
               <div class="buttons flex-row d-flex">
