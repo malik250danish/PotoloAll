@@ -1111,7 +1111,7 @@ th {
 
 .sample-text-area {
   background: #fff;
-  padding: 100px 0 70px 0;
+  padding: 100px 0px;
 }
 
 .text-heading {
@@ -2682,12 +2682,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about-area {
   position: relative;
-  padding: 150px 0 70px;
+  padding: 100px 0 0px;
 }
 
 @media (max-width: 991px) {
   .about-area {
-    padding: 20px 0 70px;
+    padding: 20px 0 20px;
   }
 }
 
