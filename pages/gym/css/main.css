@@ -2706,7 +2706,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about-area {
   position: relative;
-  padding: 150px 0 70px;
+  padding: 100px 0 70px;
 }
 
 @media (max-width: 991px) {
