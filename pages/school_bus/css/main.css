@@ -5335,3 +5335,7 @@ opacity: calc(1 - var(--opacity)); */
 .headFont {
   font-size: 25px !important;
 }
+
+.bbb h1 {
+  white-space: nowrap;
+}
