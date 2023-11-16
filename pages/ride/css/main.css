@@ -20,6 +20,11 @@ body {
   font-family: comfortaa !important;
 }
 
+.bbb {
+  white-space: nowrap !important;
+}
+
+
 h1,
 p,
 h2,
@@ -839,7 +844,7 @@ th {
 }
 
 .section-gap-top {
-  padding-top: 150px;
+  padding-top: 70px;
 }
 
 @media (max-width: 991px) {
@@ -2487,7 +2492,7 @@ h6 {
 }
 
 .spaceDiv{
-padding: 50px 0px;
+padding: 100px 0px;
   color: #FFF;
 
 font-family: Comfortaa;
@@ -2704,7 +2709,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about-area {
   position: relative;
-  padding: 100px 0 70px;
+  padding: 100px 0 5px;
 }
 
 @media (max-width: 991px) {

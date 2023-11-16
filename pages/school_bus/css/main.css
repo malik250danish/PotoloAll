@@ -20,6 +20,11 @@ body {
   font-family: comfortaa !important;
 }
 
+.bbb {
+  white-space: nowrap !important;
+}
+
+
 h1,
 p,
 h2,
@@ -838,7 +843,7 @@ th {
 }
 
 .section-gap-top {
-  padding-top: 150px;
+  padding-top: 70px;
 }
 
 @media (max-width: 991px) {
@@ -2683,7 +2688,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about-area {
   position: relative;
-  padding: 100px 0 70px;
+  padding: 100px 0 0 0;
 }
 
 @media (max-width: 991px) {
@@ -4865,7 +4870,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .downloadApp {
-  height: 400px;
+  height: 340px;
+  /* padding: 100px 0px; */
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.671)), url(../img/LastSecImg.jpeg);
@@ -5336,6 +5342,3 @@ opacity: calc(1 - var(--opacity)); */
   font-size: 25px !important;
 }
 
-.bbb h1 {
-  white-space: nowrap;
-}

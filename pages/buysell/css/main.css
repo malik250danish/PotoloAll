@@ -20,6 +20,11 @@ body {
   font-family: comfortaa !important;
 }
 
+.bbb {
+  white-space: nowrap !important;
+}
+
+
 h1,
 p,
 h2,
@@ -838,7 +843,7 @@ th {
 }
 
 .section-gap-top {
-  padding-top: 150px;
+  padding-top: 70px;
 }
 
 @media (max-width: 991px) {
@@ -4868,7 +4873,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .downloadApp {
-  height: 400px !important;
+  /* height: 400px !important; */
+  padding: 100px 0px !important;
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.671)), url(../img/LastSecPic.jpeg);
