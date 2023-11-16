@@ -19,7 +19,9 @@
 body {
   font-family: comfortaa !important;
 }
-
+.bbb {
+  white-space: nowrap !important;
+}
 h1,
 p,
 h2,
@@ -137,10 +139,10 @@ a:hover {
   background-image: url('../img/downimage.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 400px !important;
+  /* height: 400px !important; */
   background-size: cover;
   width: 100%;
-  margin-top: 110px !important;
+  margin-top: 70px !important;
 
 }
 .donwloadTxt{
@@ -151,8 +153,14 @@ font-style: normal;
 font-weight: 700;
 line-height: 38.4px; /* 128% */
 }
-.spaceDiv{
-  padding-top: 120px !important;
+.spaceDiv {
+  padding: 100px 0px;
+  color: #FFF;
+  font-family: Comfortaa;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38.4px;
 }
 @media screen and (max-width: 600px) {
   .spaceDiv{
@@ -870,7 +878,7 @@ th {
 }
 
 .section-gap-top {
-  padding-top: 150px;
+  padding-top: 70px;
 }
 
 @media (max-width: 991px) {
@@ -2706,7 +2714,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about-area {
   position: relative;
-  padding: 100px 0 70px;
+  padding: 100px 0 0 0;
 }
 
 @media (max-width: 991px) {
