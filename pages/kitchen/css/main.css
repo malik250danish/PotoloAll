@@ -280,7 +280,8 @@ th {
 .fw300 {
   font-weight: 300;
 }
-.downloadBg{
+
+.downloadBg {
   background-image: url('../img/kitBan.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -290,29 +291,35 @@ th {
   margin-top: 70px !important;
 
 }
-.donwloadTxt{
+
+.donwloadTxt {
   color: #FFF !important;
-font-family: Comfortaa !important;
-font-size: 30px !important;
-font-style: normal;
-font-weight: 700;
-line-height: 38.4px; /* 128% */
+  font-family: Comfortaa !important;
+  font-size: 30px !important;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38.4px;
+  /* 128% */
 }
-.spaceDiv{
+
+.spaceDiv {
   /* padding-top: 120px !important; */
   padding: 100px !important;
 
 }
+
 @media screen and (max-width: 600px) {
-  .spaceDiv{
+  .spaceDiv {
     padding: 50px !important;
   }
 }
+
 @media screen and (max-width: 768px) {
-  .gymPic{
-   margin-top: 80px !important;
+  .gymPic {
+    margin-top: 80px !important;
   }
 }
+
 .fw400 {
   font-weight: 400 !important;
 }
@@ -2415,7 +2422,7 @@ h6 {
   color: #fff;
   font-weight: 500;
   font-size: 15px;
-  font-family:  comfortaa !important;
+  font-family: comfortaa !important;
   text-transform: capitalize;
   outline: none;
 }
@@ -2424,15 +2431,17 @@ h6 {
   margin-right: 0;
   padding-right: 0;
 }
+
 @media screen and (max-width: 992px) {
-  .headerFont{
+  .headerFont {
     font-size: 18px !important;
-   }
+  }
 }
+
 @media screen and (max-width: 452px) {
-  .headerFont{
+  .headerFont {
     font-size: 18px !important;
-   }
+  }
 }
 
 .nav-menu ul {
@@ -4889,14 +4898,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* New Code  */
-.heroImg img{
+.heroImg img {
   width: 100%;
 }
-.title img{
+
+.title img {
   height: 70px;
   margin: 30px 0;
 }
-.downloadApp{
+
+.downloadApp {
   height: 30%;
   background-size: cover;
   background-position: center;
@@ -4904,13 +4915,35 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
   background-attachment: fixed;
 }
-.fa-google-play{
+
+.fa-google-play {
   color: #1AB33E !important;
 }
+
 .buttons:hover .fa-google-play {
   color: #ffffff !important;
 }
+
 .downloadAppBtns div .buttons {
   height: 70px;
   border-radius: 5px !important;
+}
+
+@media(max-width:992px) {
+  .cd-words-wrapper b {
+    white-space: wrap;
+
+  }
+
+  .logos {
+    position: fixed !important;
+    left: 0 !important;
+    z-index: 2 !important;
+    flex-direction: column !important;
+    top: 20rem;
+    align-items: center;
+
+  }
+
+}
 }
