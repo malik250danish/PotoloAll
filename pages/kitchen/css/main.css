@@ -2602,6 +2602,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .home-banner-area {
   /* background: url(../img/home-banner-bg.jpg) center; */
   background: url("../img/homebanner3.png") center;
+  /* background: url(./img/bgNew.png) !important; */
   background-size: cover;
 
 }
@@ -2831,7 +2832,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
 }
 
-.feature-area:after {
+/* .feature-area:after {
   content: "";
   position: absolute;
   right: 2%;
@@ -2844,7 +2845,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: -moz-linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
   background: -ms-linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
   background: -o-linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
-}
+} */
 
 @media (max-width: 991px) {
   .feature-area:after {
