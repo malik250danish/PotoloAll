@@ -2601,9 +2601,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .home-banner-area {
   /* background: url(../img/home-banner-bg.jpg) center; */
-  background: url("../img/homebanner3.png") center;
+  /* background: url("../img/homebanner3.png") center; */
+  background: url("../img/bgLatest.png");
+  /* background: url("../img/bgAnother.png"); */
   /* background: url(./img/bgNew.png) !important; */
   background-size: cover;
+ 
 
 }
 
@@ -2896,15 +2899,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #41B15B;
 }
 
-.fact-area .fact-box {
+/* .fact-area .fact-box {
   box-shadow: 0px 20px 50px rgba(153, 153, 153, 0.2);
-}
+} */
 
 .single-fact {
   text-align: center;
   margin: 45px 0;
   padding: 8px 16px;
-  border-right: 1px solid #ddd;
+  /* border-right: 1px solid #ddd; */
 }
 
 @media (max-width: 991px) {
@@ -2922,6 +2925,81 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 36px;
   margin-bottom: 5px;
 }
+.funFact{
+  color: rgba(0, 0, 0, 0.87) !important;
+text-align: center;
+font-family: Josefin Sans;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.loremTxt{
+  color: rgba(0, 0, 0, 0.38) !important;
+text-align: center;
+font-family: Josefin Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; /* 144.444% */
+}
+.hrMarg{
+  margin-top: 100px !important;
+}
+.ourServices{
+  color: rgba(0, 0, 0, 0.87);
+text-align: center;
+font-family: Josefin Sans;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.kitImg{
+  height: 60px !important;
+  width: 60px !important;
+  
+}
+.cardPad{
+  padding-block: 30px !important;
+  padding-inline: 15px !important;
+  border-radius: 14px !important;
+ 
+
+}
+.cardPad:hover {
+ 
+  background:  linear-gradient(330deg, #1DC0E9 39.15%, rgba(29, 192, 233, 0.27) 100%);
+  color: white !important;
+}
+.cardPad:hover h5 {
+  
+  color: white !important;
+}
+.cardPad:hover p {
+  
+  color: white !important;
+}
+.kitHead{
+  color: rgba(0, 0, 0, 0.87);
+font-family: Josefin Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding-top: 40px !important;
+}
+.kitPara{
+  color: rgba(0, 0, 0, 0.57);
+font-family: Josefin Sans;
+font-size: 13px;
+font-style: normal;
+padding-block: 10px !important;
+font-weight: 400;
+line-height: 19px; /* 135.714% */
+}
+
+
 
 @media (max-width: 991px) {
   .single-fact h2 {
