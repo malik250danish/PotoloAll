@@ -307,6 +307,10 @@ th {
   padding: 100px !important;
 
 }
+.reqMarg{
+  margin-top:20px !important ;
+  margin-left: 12px !important;
+}
 
 @media screen and (max-width: 600px) {
   .spaceDiv {
@@ -2860,7 +2864,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #fff;
   padding: 40px 30px;
   text-align: center;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px !important;
+  /* box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 @media (max-width: 991px) {
@@ -2963,8 +2969,10 @@ line-height: normal;
 .cardPad{
   padding-block: 30px !important;
   padding-inline: 15px !important;
-  border-radius: 14px !important;
- 
+  border-radius: 8px !important;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  transition: 0.4s ease; 
+  position: relative;
 
 }
 .cardPad:hover {
@@ -2980,6 +2988,33 @@ line-height: normal;
   
   color: white !important;
 }
+.chefHei{
+  height: 80px !important;
+}
+
+.chefHei {
+  position: absolute;
+ 
+  bottom: 0px;
+  right: 0px;
+  
+  opacity: 0;  
+  transition: opacity 0.5s ease;  
+}
+
+.cardPad:hover .chefHei {
+  opacity: 1000; 
+}
+.boyrun{
+  height: 400px !important;
+  width: 100% !important;
+}
+.btnApple:hover i{
+  color: white !important;
+}
+ 
+
+
 .kitHead{
   color: rgba(0, 0, 0, 0.87);
 font-family: Josefin Sans;
@@ -4917,9 +4952,21 @@ line-height: 19px; /* 135.714% */
 }
 
 .brandIcon:hover {
-  background-color: #1AB33E;
+  /* background-color: #1DC0E9; */
   color: #fff;
   transition: 0.5s;
+}
+.brandIcon:hover i{
+/* background-color:   #1DC0E9 !important; */
+  color: #fff;
+  transition: 0.5s;
+}
+.scrollNav{
+  color: #1DC0E9 !important;
+}
+.cardBor{
+  border-radius: 8px !important;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 
