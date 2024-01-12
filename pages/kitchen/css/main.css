@@ -307,6 +307,10 @@ th {
   padding: 100px !important;
 
 }
+.reqMarg{
+  margin-top:20px !important ;
+  margin-left: 12px !important;
+}
 
 @media screen and (max-width: 600px) {
   .spaceDiv {
@@ -2601,8 +2605,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .home-banner-area {
   /* background: url(../img/home-banner-bg.jpg) center; */
-  background: url("../img/homebanner3.png") center;
+  /* background: url("../img/homebanner3.png") center; */
+  background: url("../img/bgLatest.png");
+  /* background: url("../img/bgAnother.png"); */
+  /* background: url(./img/bgNew.png) !important; */
   background-size: cover;
+ 
 
 }
 
@@ -2831,7 +2839,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
 }
 
-.feature-area:after {
+/* .feature-area:after {
   content: "";
   position: absolute;
   right: 2%;
@@ -2844,7 +2852,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: -moz-linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
   background: -ms-linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
   background: -o-linear-gradient(to bottom left, transparent 0%, transparent 50%, #20e351 50%, #138E1A 100%);
-}
+} */
 
 @media (max-width: 991px) {
   .feature-area:after {
@@ -2856,7 +2864,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #fff;
   padding: 40px 30px;
   text-align: center;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px !important;
+  /* box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 @media (max-width: 991px) {
@@ -2895,15 +2905,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #41B15B;
 }
 
-.fact-area .fact-box {
+/* .fact-area .fact-box {
   box-shadow: 0px 20px 50px rgba(153, 153, 153, 0.2);
-}
+} */
 
 .single-fact {
   text-align: center;
   margin: 45px 0;
   padding: 8px 16px;
-  border-right: 1px solid #ddd;
+  /* border-right: 1px solid #ddd; */
 }
 
 @media (max-width: 991px) {
@@ -2921,6 +2931,110 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 36px;
   margin-bottom: 5px;
 }
+.funFact{
+  color: rgba(0, 0, 0, 0.87) !important;
+text-align: center;
+font-family: Josefin Sans;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.loremTxt{
+  color: rgba(0, 0, 0, 0.38) !important;
+text-align: center;
+font-family: Josefin Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; /* 144.444% */
+}
+.hrMarg{
+  margin-top: 100px !important;
+}
+.ourServices{
+  color: rgba(0, 0, 0, 0.87);
+text-align: center;
+font-family: Josefin Sans;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.kitImg{
+  height: 60px !important;
+  width: 60px !important;
+  
+}
+.cardPad{
+  padding-block: 30px !important;
+  padding-inline: 15px !important;
+  border-radius: 8px !important;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  transition: 0.4s ease; 
+  position: relative;
+
+}
+.cardPad:hover {
+ 
+  background:  linear-gradient(330deg, #1DC0E9 39.15%, rgba(29, 192, 233, 0.27) 100%);
+  color: white !important;
+}
+.cardPad:hover h5 {
+  
+  color: white !important;
+}
+.cardPad:hover p {
+  
+  color: white !important;
+}
+.chefHei{
+  height: 80px !important;
+}
+
+.chefHei {
+  position: absolute;
+ 
+  bottom: 0px;
+  right: 0px;
+  
+  opacity: 0;  
+  transition: opacity 0.5s ease;  
+}
+
+.cardPad:hover .chefHei {
+  opacity: 1000; 
+}
+.boyrun{
+  height: 400px !important;
+  width: 100% !important;
+}
+.btnApple:hover i{
+  color: white !important;
+}
+ 
+
+
+.kitHead{
+  color: rgba(0, 0, 0, 0.87);
+font-family: Josefin Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding-top: 40px !important;
+}
+.kitPara{
+  color: rgba(0, 0, 0, 0.57);
+font-family: Josefin Sans;
+font-size: 13px;
+font-style: normal;
+padding-block: 10px !important;
+font-weight: 400;
+line-height: 19px; /* 135.714% */
+}
+
+
 
 @media (max-width: 991px) {
   .single-fact h2 {
@@ -4838,9 +4952,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .brandIcon:hover {
-  background-color: #1AB33E;
+  /* background-color: #1DC0E9; */
   color: #fff;
   transition: 0.5s;
+}
+.brandIcon:hover i{
+/* background-color:   #1DC0E9 !important; */
+  color: #fff;
+  transition: 0.5s;
+}
+.scrollNav{
+  color: #1DC0E9 !important;
+}
+.cardBor{
+  border-radius: 8px !important;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 
